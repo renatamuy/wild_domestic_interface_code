@@ -1,0 +1,17 @@
+article_id,module,field,quote,page,section,grounding_status
+a122,interface,interface_mentioned,,,,MISSING_QUOTE
+a122,interface,interface_in_objectives,,,,MISSING_QUOTE
+a122,interface,conceptual_framing,,,,MISSING_QUOTE
+a122,interface,qualitative_representation,,,,MISSING_QUOTE
+a122,interface,quantitative_variable_present,,,,MISSING_QUOTE
+a122,interface,variable_used_in_analysis,,,,MISSING_QUOTE
+a122,interface,interface_specific_question_addressed,,,,MISSING_QUOTE
+a122,interface,interface_explicit,,,,MISSING_QUOTE
+a52,interface,interface_mentioned,,,,MISSING_QUOTE
+a52,interface,interface_in_objectives,,,,MISSING_QUOTE
+a52,interface,conceptual_framing,,,,MISSING_QUOTE
+a52,interface,qualitative_representation,,,,MISSING_QUOTE
+a52,interface,quantitative_variable_present,,,,MISSING_QUOTE
+a52,interface,variable_used_in_analysis,,,,MISSING_QUOTE
+a52,interface,interface_specific_question_addressed,,,,MISSING_QUOTE
+a52,interface,interface_explicit,,,,MISSING_QUOTE

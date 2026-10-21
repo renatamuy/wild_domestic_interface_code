@@ -1,0 +1,3 @@
+paper_id,file_name,status,start_time,end_time,elapsed_sec,model,prompt_tokens,output_tokens,estimated_api_cost_usd,error_message
+a122,122.pdf,COMPLETED,2026-09-29 11:37:20,2026-09-29 11:37:45,24.79865002632141,gpt-5.6-terra,29989,1747,0.080942,NA
+a52,52.pdf,COMPLETED,2026-09-29 11:37:45,2026-09-29 11:38:06,20.866175889968872,gpt-5.6-terra,41046,1988,0.105948,NA

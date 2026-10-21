@@ -1,0 +1,17 @@
+host_orientation,interface_operationalisation,host_focus_group,n_papers,percent_corpus
+-0.75,-0.5,Wildlife-centred,1,0.373134328358209
+-0.75,0,Wildlife-centred,7,2.611940298507463
+-0.75,1,Wildlife-centred,4,1.492537313432836
+-0.5,-0.5,Wildlife-centred,1,0.373134328358209
+-0.5,0,Wildlife-centred,19,7.08955223880597
+-0.5,0.5,Wildlife-centred,3,1.1194029850746268
+-0.5,1,Wildlife-centred,52,19.402985074626866
+0,-0.5,Balanced wild–domestic,4,1.492537313432836
+0,0,Balanced wild–domestic,32,11.940298507462687
+0,0.5,Balanced wild–domestic,7,2.611940298507463
+0,1,Balanced wild–domestic,96,35.82089552238806
+0.5,0,Domestic-centred,10,3.7313432835820897
+0.5,0.5,Domestic-centred,2,0.746268656716418
+0.5,1,Domestic-centred,24,8.955223880597014
+0.75,0,Domestic-centred,1,0.373134328358209
+0.75,1,Domestic-centred,5,1.8656716417910448

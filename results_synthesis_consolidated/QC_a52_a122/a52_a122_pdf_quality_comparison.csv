@@ -1,0 +1,3 @@
+article_id,OLD_file_name,OLD_n_pages,OLD_total_chars,OLD_median_chars_per_page,OLD_empty_pages,OLD_empty_page_prop,OLD_pdf_text_status,NEW_file_name,NEW_n_pages,NEW_total_chars,NEW_median_chars_per_page,NEW_empty_pages,NEW_empty_page_prop,NEW_pdf_text_status
+a122,122.pdf,17,0,0,17,1,POSSIBLE_SCAN,122.pdf,17,98228,5870,0,0,OK
+a52,52.pdf,12,0,0,12,1,POSSIBLE_SCAN,52.pdf,12,80735,8497.5,0,0,OK

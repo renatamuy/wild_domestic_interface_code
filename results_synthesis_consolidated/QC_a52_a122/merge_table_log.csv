@@ -1,0 +1,10 @@
+table,filename,id_column,original_rows,rerun_target_rows,consolidated_rows
+paper_summary,evidence_first_test_paper_summary_lean.csv,article_id,270,2,270
+plot_data,evidence_first_test_plot_data.csv,paper_id,270,2,270
+disease_long,evidence_first_test_disease_long.csv,article_id,1531,8,1539
+quantitative_measures,evidence_first_test_quantitative_measures_long.csv,article_id,359,1,360
+conceptual_evidence,evidence_first_test_conceptual_evidence.csv,paper_id,270,2,270
+evidence_long,evidence_first_test_evidence_long_lean.csv,article_id,2160,16,2160
+audit_long,evidence_first_test_audit_long_lean.csv,paper_id,2700,20,2700
+module_audit,evidence_first_test_module_audit_lean.csv,article_id,810,6,810
+pdf_quality,evidence_first_test_pdf_quality.csv,article_id,270,2,270

@@ -1,0 +1,9 @@
+article_id,disease,agent_type,transmission_mode
+a122,African swine fever virus (ASFv),viral,direct contact
+a122,African swine fever virus (ASFv),viral,indirect contact
+a122,African swine fever virus (ASFv),viral,vector-borne
+a122,African swine fever virus (ASFv),viral,environmental
+a52,Highly pathogenic avian influenza H5N1,viral,direct contact
+a52,Low pathogenic avian influenza H1N1,viral,
+a52,Low pathogenic avian influenza H7N7,viral,
+a52,Low pathogenic avian influenza H10N9,viral,

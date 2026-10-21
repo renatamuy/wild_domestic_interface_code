@@ -1,0 +1,2 @@
+dataset,description,completed_papers,total_runtime_hours_for_records_used,total_prompt_tokens_for_records_used,total_output_tokens_for_records_used,estimated_api_cost_usd_for_records_used,papers_pdf_not_ok,papers_with_parse_error,papers_with_quote_not_found,papers_with_boolean_evidence_inconsistency
+results_synthesis_consolidated,268 original production records plus targeted clean-PDF rerun records for a52 and a122; not a single uninterrupted API run.,270,1.5659872019953198,9660734,543073,25.838344,0,0,238,0

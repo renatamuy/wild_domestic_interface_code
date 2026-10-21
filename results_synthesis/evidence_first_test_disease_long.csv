@@ -1,0 +1,1532 @@
+article_id,disease,agent_type,transmission_mode
+a10,Foot and mouth disease,viral,direct contact
+a10,Foot and mouth disease,viral,indirect contact
+a10,Foot and mouth disease,viral,aerosol
+a10,Rinderpest,viral,direct contact
+a10,Rinderpest,viral,indirect contact
+a10,Rinderpest,viral,aerosol
+a10,Peste des petits ruminants,viral,direct contact
+a10,Peste des petits ruminants,viral,aerosol
+a10,Peste des petits ruminants,viral,indirect contact
+a10,Malignant catarrhal fever,viral,direct contact
+a10,Rabies,viral,direct contact
+a10,Rabies,viral,aerosol
+a10,Brucellosis,bacterial,direct contact
+a10,Bovine tuberculosis,bacterial,aerosol
+a10,Bovine tuberculosis,bacterial,direct contact
+a10,Bovine tuberculosis,bacterial,environmental
+a10,Paratuberculosis,bacterial,faecal-oral
+a10,Paratuberculosis,bacterial,indirect contact
+a10,Paratuberculosis,bacterial,environmental
+a10,Anthrax,bacterial,vector-borne
+a10,Anthrax,bacterial,environmental
+a10,Leptospirosis,bacterial,direct contact
+a10,Leptospirosis,bacterial,indirect contact
+a10,Leptospirosis,bacterial,environmental
+a10,African swine fever,viral,vector-borne
+a10,African swine fever,viral,direct contact
+a10,African swine fever,viral,indirect contact
+a10,African swine fever,viral,aerosol
+a10,Classical swine fever,viral,direct contact
+a10,Classical swine fever,viral,foodborne
+a10,Nipah virus infection,viral,foodborne
+a10,Nipah virus infection,viral,waterborne
+a10,Nipah virus infection,viral,direct contact
+a10,Newcastle disease,viral,NA
+a10,Avian influenza,viral,faecal-oral
+a10,Avian influenza,viral,direct contact
+a10,Avian influenza,viral,indirect contact
+a10,Anaplasmosis,bacterial,vector-borne
+a10,Bovine petechial fever,unclear,vector-borne
+a10,Heartwater,bacterial,vector-borne
+a10,Lyme disease,bacterial,vector-borne
+a10,Tularemia,bacterial,vector-borne
+a10,Tularemia,bacterial,direct contact
+a10,African horse sickness,viral,vector-borne
+a10,Bluetongue,viral,vector-borne
+a10,Epizootic haemorrhagic disease,viral,vector-borne
+a10,Louping ill,viral,vector-borne
+a10,Lumpy skin disease,viral,vector-borne
+a10,Japanese encephalitis,viral,vector-borne
+a10,Tickborne encephalitis,viral,vector-borne
+a10,Western equine encephalitis,viral,vector-borne
+a10,West Nile disease,viral,vector-borne
+a10,East coast fever,parasitic,vector-borne
+a10,Trypanosomosis,parasitic,vector-borne
+a10,Contagious bovine pleuropneumonia,bacterial,NA
+a10,Encephalomyocarditis,viral,NA
+a10,Fascioliosis,parasitic,NA
+a10,Hydatid disease,parasitic,NA
+a10,Echinococcus granularis,parasitic,NA
+a1008,Foot-and-mouth disease,viral,direct contact
+a1008,Foot-and-mouth disease,viral,environmental
+a1008,Foot-and-mouth disease,viral,indirect contact
+a1008,Foot-and-mouth disease,viral,aerosol
+a1009,Canine distemper virus (CDV) infection,viral,direct contact
+a1009,Canine distemper virus (CDV) infection,viral,indirect contact
+a1009,Canine parvovirus (CPV) infection,viral,NA
+a1009,Feline panleukopenia virus (FPV) infection,viral,NA
+a1009,Canine coronavirus (CCV) infection,viral,NA
+a1009,Rotavirus infection,viral,NA
+a1009,Influenza A virus infection,viral,NA
+a1009,Rabies virus infection,viral,NA
+a1009,Canine parainfluenza virus (CPIV) infection,viral,NA
+a1009,Canine adenovirus (CAV) infection,viral,NA
+a1009,Pseudorabies virus (PRV) infection,viral,NA
+a1009,Ailuropoda melanoleuca virus (Aimelvirus) infection,viral,NA
+a1009,Giant Panda Gemycircularvirus 2 (GpGMCV2) infection,viral,NA
+a1009,Panda-stool-associated RNA virus (PANSAVIRUS) infection,viral,NA
+a1009,Giant panda gemycircularvirus (GPGMCV) infection,viral,NA
+a1009,Giant panda anellovirus (GPAV) infection,viral,NA
+a1009,Giant Panda Circovirus-like Virus 1 (GPCV1) infection,viral,NA
+a1009,Ailuropoda melanoleuca papillomavirus 1 (AMPV1) infection,viral,NA
+a1009,Picobirnavirus-like infection,viral,NA
+a1009,Giant panda polyomavirus 1 (GPPYV1) infection,viral,NA
+a1009,Giant panda-associated circovirus infection,viral,NA
+a1009,Escherichia coli infection,bacterial,NA
+a1009,Klebsiella pneumoniae infection,bacterial,NA
+a1009,Campylobacter jejuni infection,bacterial,NA
+a1009,Pseudomonas aeruginosa infection,bacterial,NA
+a1009,Clostridium spp. infection,bacterial,NA
+a1009,Proteus mirabilis infection,bacterial,NA
+a1009,Enterococcus faecalis infection,bacterial,NA
+a1009,Enteroinvasive Escherichia coli O152 infection,bacterial,NA
+a1009,Baylisascaris schroederi infection,parasitic,faecal-oral
+a1009,Baylisascaris schroederi infection,parasitic,indirect contact
+a1009,Baylisascaris schroederi infection,parasitic,environmental
+a1009,Ogmocotyle sikae infection,parasitic,NA
+a1009,Ancylostoma ailuropodae infection,parasitic,NA
+a1009,Enterocytozoon bieneusi infection,parasitic,NA
+a1009,Toxoplasma gondii infection,parasitic,NA
+a1009,Hepatozoon sp. infection,parasitic,NA
+a1009,Cryptosporidium spp. infection,parasitic,NA
+a1009,Babesiosis (Babesia spp. infection),parasitic,vector-borne
+a1009,Chorioptes panda infection,parasitic,NA
+a1009,Demodex ailuropodae infection,parasitic,NA
+a1028,Bluetongue virus,viral,NA
+a1028,Rift Valley fever virus,viral,vector-borne
+a1028,Small ruminant morbillivirus (PPR virus),viral,NA
+a1028,Epizootic hemorrhagic disease virus,viral,NA
+a1028,Foot-and-mouth disease virus,viral,NA
+a1028,Crimean-Congo hemorrhagic fever virus,viral,NA
+a1028,MERS coronavirus,viral,NA
+a1028,Mycoplasma mycoides subsp. mycoides,bacterial,NA
+a1028,Mycoplasma capricolum subsp. capripneumoniae,bacterial,NA
+a1028,Pasteurella multocida,bacterial,NA
+a1028,Mycobacterium sp.,bacterial,NA
+a1028,Brucella sp.,bacterial,NA
+a1028,Chlamydia abortus,bacterial,NA
+a1028,Chlamydia sp.,bacterial,NA
+a1028,Coxiella burnetii,bacterial,NA
+a1028,Leptospira sp.,bacterial,NA
+a1028,Bacillus anthracis,bacterial,NA
+a1028,Ehrlichia ruminantium,bacterial,NA
+a1028,Anaplasma sp.,bacterial,NA
+a1028,Rickettsia sp.,bacterial,NA
+a1028,Trypanosoma sp.,parasitic,NA
+a1028,Babesia bigemina,parasitic,NA
+a1028,Babesia sp.,parasitic,NA
+a1028,Theileria sp.,parasitic,NA
+a1028,Theileria annulata,parasitic,NA
+a1028,Toxoplasma gondii,parasitic,NA
+a1028,Schistosoma sp.,parasitic,NA
+a1028,Echinococcus sp.,parasitic,NA
+a1028,Fasciola gigantica,parasitic,NA
+a1028,Fasciola hepatica,parasitic,NA
+a1028,Dicrocoelium hospes,parasitic,NA
+a1028,Thysaniezia sp.,parasitic,NA
+a1028,Hyalomma sp.,parasitic,NA
+a1028,Rhipicephalus sp.,parasitic,NA
+a1028,Phlebotomus sp.,parasitic,NA
+a1028,Haematobia spp.,parasitic,NA
+a1028,Prion PrPSc (Scrapie),prion,NA
+a1028,Paratuberculosis,bacterial,NA
+a1028,Bovine tuberculosis,bacterial,NA
+a1028,Brucellosis,bacterial,NA
+a1028,Contagious caprine pleuropneumonia,bacterial,NA
+a1028,Contagious bovine pleuropneumonia,bacterial,NA
+a1028,Q fever,bacterial,NA
+a103,H5N1 highly pathogenic avian influenza,viral,faecal-oral
+a103,H5N1 highly pathogenic avian influenza,viral,aerosol
+a103,H5N1 highly pathogenic avian influenza,viral,indirect contact
+a103,H9N2 low-pathogenic avian influenza,viral,NA
+a103,H6 low-pathogenic avian influenza,viral,NA
+a103,H3N2 canine influenza,viral,NA
+a103,H6N6 swine influenza,viral,NA
+a103,H1N1 swine influenza,viral,NA
+a1032,"Avian influenza H10 virus infection (H10N2, H10N7, and H10N8)",viral,waterborne
+a1034,Avian influenza virus infection (low pathogenic avian influenza virus subtype H5N2),viral,aerosol
+a1034,Avian influenza virus infection (low pathogenic avian influenza virus subtype H5N2),viral,faecal-oral
+a1034,Salmonella spp.,bacterial,NA
+a1034,Usutu virus,viral,NA
+a1034,West Nile virus,viral,NA
+a1034,Newcastle disease virus,viral,NA
+a106,echinostomatid trematode infection,parasitic,NA
+a109,Pestiviruses,viral,direct contact
+a109,Pestiviruses,viral,aerosol
+a109,Bovine respiratory syncytial virus (BRSV; Bovine orthopneumovirus),viral,direct contact
+a109,Bovine respiratory syncytial virus (BRSV; Bovine orthopneumovirus),viral,aerosol
+a109,Bovine herpesvirus 1 (BoHV-1; Bovine alphaherpesvirus 1),viral,direct contact
+a109,Bovine herpesvirus 1 (BoHV-1; Bovine alphaherpesvirus 1),viral,aerosol
+a109,Mycobacterium tuberculosis complex (MTC),bacterial,direct contact
+a112,Ornithonyssus sylviarum infestation,parasitic,NA
+a112,Ornithonyssus bursa infestation,parasitic,NA
+a112,Pellonyssus cf. reedi infestation,parasitic,NA
+a112,Dermanyssus cf. triscutatus infestation,parasitic,NA
+a113,Bovine tuberculosis (bTB) / Mycobacterium bovis infection,bacterial,aerosol
+a113,Bovine tuberculosis (bTB) / Mycobacterium bovis infection,bacterial,environmental
+a113,Bovine tuberculosis (bTB) / Mycobacterium bovis infection,bacterial,direct contact
+a113,Bovine tuberculosis (bTB) / Mycobacterium bovis infection,bacterial,indirect contact
+a113,Bovine tuberculosis (bTB) / Mycobacterium bovis infection,bacterial,foodborne
+a114,Gastrointestinal helminthiasis: Raillietina echinobothrida,parasitic,NA
+a114,Gastrointestinal helminthiasis: Raillietina tetragona,parasitic,NA
+a114,Gastrointestinal helminthiasis: Raillietina cesticillus,parasitic,NA
+a114,Gastrointestinal helminthiasis: Ascaridia galli,parasitic,NA
+a114,Gastrointestinal helminthiasis: Allodapa suctoria,parasitic,NA
+a114,Gastrointestinal helminthiasis: Gongylonema ingluvicola,parasitic,NA
+a114,Gastrointestinal helminthiasis: Tetrameres spp.,parasitic,NA
+a114,Gastrointestinal helminthiasis: Heterakis spp.,parasitic,NA
+a114,Gastrointestinal helminthiasis: Acuaria spiralis,parasitic,NA
+a114,Gastrointestinal helminthiasis: Syngamus trachea,parasitic,NA
+a114,Gastrointestinal helminthiasis: Streptocara pectinifera,parasitic,NA
+a118,Peste des petits ruminants virus infection,viral,NA
+a12,canine distemper virus (CDV),viral,direct contact
+a12,canine distemper virus (CDV),viral,indirect contact
+a123,rabies,viral,NA
+a127,Bovine tuberculosis (BTB; Mycobacterium bovis infection),bacterial,environmental
+a127,Bovine tuberculosis (BTB; Mycobacterium bovis infection),bacterial,indirect contact
+a130,Pestivirus infection,viral,direct contact
+a130,Border disease virus infection,viral,direct contact
+a134,Aleutian disease (AD) / Aleutian disease virus (ADV) infection,viral,direct contact
+a134,Aleutian disease (AD) / Aleutian disease virus (ADV) infection,viral,aerosol
+a134,Aleutian disease (AD) / Aleutian disease virus (ADV) infection,viral,vertical
+a134,Aleutian disease (AD) / Aleutian disease virus (ADV) infection,viral,environmental
+a134,Aleutian disease (AD) / Aleutian disease virus (ADV) infection,viral,indirect contact
+a138,rabies,viral,direct contact
+a139,African swine fever (ASF),viral,vector-borne
+a139,African swine fever (ASF),viral,direct contact
+a143,mammalian tuberculosis (mTB) / bovine tuberculosis caused by Mycobacterium bovis,bacterial,direct contact
+a143,mammalian tuberculosis (mTB) / bovine tuberculosis caused by Mycobacterium bovis,bacterial,indirect contact
+a143,mammalian tuberculosis (mTB) / bovine tuberculosis caused by Mycobacterium bovis,bacterial,environmental
+a143,non-tuberculous mycobacteria (NTM) infection,bacterial,NA
+a148,Diarrheagenic Escherichia coli (including presumptive Shiga toxin-producing E. coli O157),bacterial,NA
+a151,Foot-and-mouth disease (FMD),viral,direct contact
+a152,Bovine tuberculosis (BTB) due to Mycobacterium bovis,bacterial,aerosol
+a152,Bovine tuberculosis (BTB) due to Mycobacterium bovis,bacterial,direct contact
+a152,Bovine tuberculosis (BTB) due to Mycobacterium bovis,bacterial,environmental
+a152,Bovine tuberculosis (BTB) due to Mycobacterium bovis,bacterial,faecal-oral
+a152,Bovine tuberculosis (BTB) due to Mycobacterium bovis,bacterial,foodborne
+a152,Bovine tuberculosis (BTB) due to Mycobacterium bovis,bacterial,indirect contact
+a152,Bovine tuberculosis (BTB) due to Mycobacterium bovis,bacterial,vertical
+a152,Tuberculosis due to Mycobacterium tuberculosis,bacterial,indirect contact
+a152,Tuberculosis due to Mycobacterium suricattae,bacterial,aerosol
+a152,Tuberculosis due to Mycobacterium suricattae,bacterial,direct contact
+a152,Tuberculosis due to 'Dassie bacillus',bacterial,NA
+a152,Tuberculosis due to 'Oryx bacillus',bacterial,NA
+a159,Highly pathogenic avian influenza H5N8,viral,direct contact
+a159,Highly pathogenic avian influenza H5N8,viral,indirect contact
+a16,Trichomonas infection (trichomoniasis),parasitic,direct contact
+a16,Trichomonas infection (trichomoniasis),parasitic,waterborne
+a173,Bovine viral diarrhoea virus (BVDV) infection,viral,direct contact
+a173,Bovine viral diarrhoea virus (BVDV) infection,viral,indirect contact
+a173,Border disease virus (BDV) infection,viral,direct contact
+a173,Border disease virus (BDV) infection,viral,indirect contact
+a174,Foot-and-mouth disease (FMD) caused by foot-and-mouth disease virus (FMDV) serotype SAT2,viral,direct contact
+a177,African swine fever,viral,NA
+a182,Influenza A virus (IAV) infection,viral,NA
+a187,Rift Valley fever virus infection (Rift Valley fever),viral,vector-borne
+a188,Japanese encephalitis virus (JEV) infection,viral,vector-borne
+a189,Toxoplasma gondii infection (toxoplasmosis),parasitic,environmental
+a189,Toxoplasma gondii infection (toxoplasmosis),parasitic,foodborne
+a189,Toxoplasma gondii infection (toxoplasmosis),parasitic,waterborne
+a189,Toxoplasma gondii infection (toxoplasmosis),parasitic,vertical
+a194,Rhodesian human African trypanosomiasis (r-HAT; Rhodesian sleeping sickness),parasitic,vector-borne
+a195,Viruses,viral,NA
+a195,Bacteria,bacterial,NA
+a195,Protozoans and metazoans,parasitic,NA
+a195,Fungi,fungal,NA
+a195,Prions,prion,NA
+a20,Fasciola sp.,parasitic,indirect contact
+a20,Amphistome sp.,parasitic,indirect contact
+a20,Schistosoma sp.,parasitic,indirect contact
+a20,Moniezia sp.,parasitic,indirect contact
+a20,Toxocara sp.,parasitic,faecal-oral
+a20,Toxocara sp.,parasitic,environmental
+a20,Strongyle-type egg,parasitic,faecal-oral
+a20,Strongyle-type egg,parasitic,environmental
+a20,Oesophagostomum sp.,parasitic,faecal-oral
+a20,Oesophagostomum sp.,parasitic,environmental
+a20,Mecistocirrus sp.,parasitic,faecal-oral
+a20,Mecistocirrus sp.,parasitic,environmental
+a20,Trichuris sp.,parasitic,faecal-oral
+a20,Trichuris sp.,parasitic,environmental
+a20,Coccidia oocyst,parasitic,NA
+a203,Bovine tuberculosis (BTB) / zoonotic tuberculosis due to Mycobacterium bovis,bacterial,foodborne
+a203,Tuberculosis due to Mycobacterium tuberculosis,bacterial,aerosol
+a206,Salmonella spp.,bacterial,foodborne
+a206,Salmonella spp.,bacterial,direct contact
+a206,Salmonella spp.,bacterial,environmental
+a206,Campylobacter spp.,bacterial,foodborne
+a206,Campylobacter spp.,bacterial,direct contact
+a206,Campylobacter spp.,bacterial,environmental
+a206,Arcobacter spp.,bacterial,foodborne
+a209,Bovine brucellosis,bacterial,direct contact
+a209,Bovine brucellosis,bacterial,environmental
+a210,African swine fever,viral,direct contact
+a210,African swine fever,viral,indirect contact
+a213,bovine tuberculosis (TB),bacterial,direct contact
+a215,Low pathogenicity avian influenza virus (LPAIV),viral,direct contact
+a215,Low pathogenicity avian influenza virus (LPAIV),viral,environmental
+a215,Low pathogenicity avian influenza virus (LPAIV),viral,faecal-oral
+a220,Nipah virus disease,viral,direct contact
+a220,Nipah virus disease,viral,environmental
+a220,Severe acute respiratory syndrome (SARS),viral,direct contact
+a220,Schmallenberg virus infection,viral,vector-borne
+a220,Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection,viral,direct contact
+a220,Middle East Respiratory Syndrome Coronavirus (MERS-CoV) infection,viral,indirect contact
+a220,Avian influenza,viral,direct contact
+a220,Bluetongue virus infection,viral,vector-borne
+a220,West Nile virus infection,viral,vector-borne
+a220,Zika virus infection,viral,vector-borne
+a220,Ebola virus disease,viral,direct contact
+a220,Ebola virus disease,viral,indirect contact
+a220,Plasmodium knowlesi malaria,parasitic,vector-borne
+a220,Chagas disease,parasitic,vector-borne
+a220,Chagas disease,parasitic,foodborne
+a220,Chagas disease,parasitic,vertical
+a220,Chagas disease,parasitic,indirect contact
+a224,Q fever (Coxiella burnetii infection),bacterial,NA
+a225,Escherichia coli,bacterial,faecal-oral
+a227,Newcastle disease / Newcastle disease virus (NDV; Avian avulavirus 1),viral,direct contact
+a227,Newcastle disease / Newcastle disease virus (NDV; Avian avulavirus 1),viral,environmental
+a227,Newcastle disease / Newcastle disease virus (NDV; Avian avulavirus 1),viral,indirect contact
+a229,Bluetongue (bluetongue virus serotype 4 infection),viral,vector-borne
+a229,Bluetongue (bluetongue virus serotype 4 infection),viral,vertical
+a229,Bluetongue (bluetongue virus serotype 4 infection),viral,direct contact
+a239,Chlamydia pecorum,bacterial,NA
+a239,Chlamydia psittaci,bacterial,NA
+a239,Chlamydia abortus,bacterial,NA
+a239,Chlamydia gallinacea,bacterial,NA
+a24,Avian influenza viruses,viral,direct contact
+a24,Avian influenza viruses,viral,environmental
+a24,Avian influenza viruses,viral,indirect contact
+a24,Highly pathogenic avian influenza H5N1,viral,direct contact
+a24,Highly pathogenic avian influenza H5N1,viral,environmental
+a24,Highly pathogenic avian influenza H5N1,viral,indirect contact
+a24,Low pathogenic avian influenza H9N2,viral,direct contact
+a24,Low pathogenic avian influenza H9N2,viral,environmental
+a24,Low pathogenic avian influenza H9N2,viral,indirect contact
+a24,Highly pathogenic avian influenza H5N8,viral,direct contact
+a24,Highly pathogenic avian influenza H5N8,viral,environmental
+a24,Highly pathogenic avian influenza H5N8,viral,indirect contact
+a25,Q fever (coxiellosis in animals) caused by Coxiella burnetii,bacterial,aerosol
+a250,Highly pathogenic avian influenza A(H5N8),viral,direct contact
+a250,Highly pathogenic avian influenza A(H5N8),viral,indirect contact
+a253,Q fever,bacterial,aerosol
+a253,Q fever,bacterial,environmental
+a253,Q fever,bacterial,vector-borne
+a253,Q fever,bacterial,direct contact
+a254,Bovine tuberculosis (Mycobacterium bovis infection),bacterial,aerosol
+a257,Highly pathogenic avian influenza H5Nx,viral,indirect contact
+a258,Canine distemper,viral,indirect contact
+a258,Canine distemper,viral,aerosol
+a258,Canine distemper,viral,direct contact
+a261,Gastrointestinal nematode infection,parasitic,environmental
+a261,Haemonchus contortus,parasitic,environmental
+a262,bovine tuberculosis (TB),bacterial,direct contact
+a262,bovine tuberculosis (TB),bacterial,environmental
+a262,bovine tuberculosis (TB),bacterial,indirect contact
+a262,bovine tuberculosis (TB),bacterial,waterborne
+a265,African swine fever (ASF),viral,direct contact
+a265,African swine fever (ASF),viral,environmental
+a265,African swine fever (ASF),viral,vector-borne
+a265,African swine fever (ASF),viral,indirect contact
+a265,African swine fever (ASF),viral,foodborne
+a265,African swine fever (ASF),viral,waterborne
+a267,Foot and mouth disease (FMD),viral,direct contact
+a267,Foot and mouth disease (FMD),viral,indirect contact
+a270,African swine fever,viral,vector-borne
+a271,Mycobacterium tuberculosis complex infection / tuberculosis,bacterial,direct contact
+a272,Coronaviruses (CoVs),viral,direct contact
+a272,Coronaviruses (CoVs),viral,indirect contact
+a272,Coronaviruses (CoVs),viral,aerosol
+a272,Coronaviruses (CoVs),viral,faecal-oral
+a272,Severe acute respiratory syndrome coronavirus (SARS-CoV),viral,aerosol
+a272,Severe acute respiratory syndrome coronavirus (SARS-CoV),viral,indirect contact
+a272,Severe acute respiratory syndrome coronavirus (SARS-CoV),viral,faecal-oral
+a272,Middle East respiratory syndrome coronavirus (MERS-CoV),viral,aerosol
+a272,Middle East respiratory syndrome coronavirus (MERS-CoV),viral,direct contact
+a272,Middle East respiratory syndrome coronavirus (MERS-CoV),viral,indirect contact
+a272,Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2),viral,aerosol
+a272,Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2),viral,direct contact
+a272,Severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2),viral,indirect contact
+a272,Human coronavirus 229E (HCoV-229E),viral,aerosol
+a272,Human coronavirus 229E (HCoV-229E),viral,direct contact
+a272,Human coronavirus 229E (HCoV-229E),viral,indirect contact
+a272,Human coronavirus NL63 (HCoV-NL63),viral,aerosol
+a272,Human coronavirus NL63 (HCoV-NL63),viral,direct contact
+a272,Human coronavirus NL63 (HCoV-NL63),viral,indirect contact
+a272,Human coronavirus HKU1 (HCoV-HKU1),viral,aerosol
+a272,Human coronavirus HKU1 (HCoV-HKU1),viral,direct contact
+a272,Human coronavirus HKU1 (HCoV-HKU1),viral,indirect contact
+a272,Human coronavirus OC43 (HCoV-OC43),viral,aerosol
+a272,Human coronavirus OC43 (HCoV-OC43),viral,direct contact
+a272,Human coronavirus OC43 (HCoV-OC43),viral,indirect contact
+a272,Bovine coronavirus (BCoV),viral,NA
+a272,Avian infectious bronchitis virus (IBV),viral,NA
+a272,Porcine deltacoronavirus (PDCoV) HKU15,viral,NA
+a272,Canine coronavirus,viral,NA
+a272,Feline coronavirus,viral,NA
+a272,Transmissible gastroenteritis virus (TGEV),viral,NA
+a272,Murine coronavirus (mCoV),viral,NA
+a272,Sialodacryoadenitis coronavirus (SDAV),viral,NA
+a272,Porcine epidemic diarrhea virus (PEDV),viral,NA
+a272,Porcine hemagglutinating encephalomyelitis virus (PHEV),viral,NA
+a272,Porcine enteric alphacoronavirus (PEAV),viral,NA
+a272,Canine respiratory coronavirus (CRCoV),viral,NA
+a272,Ferret enteric coronavirus (FrECoV),viral,NA
+a272,Alpaca coronavirus,viral,NA
+a272,Equine coronavirus (ECoV),viral,NA
+a276,foot-and-mouth disease (FMD),viral,direct contact
+a276,foot-and-mouth disease (FMD),viral,environmental
+a276,foot-and-mouth disease (FMD),viral,aerosol
+a28,Carnivore protoparvovirus 1 / canine parvovirus (CPV-2),viral,faecal-oral
+a28,Carnivore protoparvovirus 1 / canine parvovirus (CPV-2),viral,direct contact
+a281,Trypanosomiasis (Trypanosoma congolense),parasitic,vector-borne
+a281,Trypanosomiasis (Trypanosoma vivax),parasitic,vector-borne
+a281,Trypanosomiasis (Trypanosoma brucei),parasitic,unclear
+a281,Trypanosomiasis (Trypanosoma evansi),parasitic,NA
+a281,Trypanosomiasis (Trypanosoma brucei rhodesiense),parasitic,NA
+a281,Trypanosomiasis (Trypanosoma brucei gambiense),parasitic,NA
+a281,Theileriosis / East coast fever / Corridor Disease (Theileria parva),parasitic,vector-borne
+a281,Theileriosis (Theileria taurotragi),parasitic,vector-borne
+a281,Theileriosis (Theileria gorgonis),parasitic,vector-borne
+a281,Anaplasmosis (Anaplasma),bacterial,vector-borne
+a281,Bovine petechial fever (Cytoecetes ondiri),bacterial,unclear
+a281,Malignant catarrhal fever (alcelaphine herpesvirus ACV-1),viral,unclear
+a282,canine distemper virus (CDV) infection,viral,unclear
+a283,Babesia spp.,parasitic,vector-borne
+a283,Theileria spp.,parasitic,vector-borne
+a283,Anaplasma spp.,bacterial,vector-borne
+a283,Ehrlichia spp.,bacterial,vector-borne
+a287,brucellosis,bacterial,environmental
+a29,bovine tuberculosis,bacterial,direct contact
+a29,bovine tuberculosis,bacterial,environmental
+a29,bovine tuberculosis,bacterial,indirect contact
+a29,African swine fever,viral,indirect contact
+a29,foot-and-mouth disease,viral,direct contact
+a29,foot-and-mouth disease,viral,indirect contact
+a29,brucellosis,bacterial,direct contact
+a29,brucellosis,bacterial,indirect contact
+a29,classical swine fever,viral,indirect contact
+a29,trypanosomiasis,parasitic,vector-borne
+a29,nematodiasis,parasitic,NA
+a29,babesiosis,parasitic,vector-borne
+a29,echinococcosis,parasitic,NA
+a29,louping ill,viral,vector-borne
+a29,neosporosis,parasitic,NA
+a29,toxoplasmosis,parasitic,faecal-oral
+a29,trichostrongylosis,parasitic,NA
+a29,paratuberculosis,bacterial,NA
+a290,tuberculosis due to Mycobacterium bovis,bacterial,direct contact
+a290,tuberculosis due to Mycobacterium bovis,bacterial,indirect contact
+a290,tuberculosis due to Mycobacterium bovis,bacterial,aerosol
+a290,tuberculosis due to Mycobacterium bovis,bacterial,environmental
+a290,tuberculosis due to Mycobacterium bovis,bacterial,foodborne
+a296,"Animal tuberculosis (TB) caused by Mycobacterium tuberculosis complex bacteria, including M. bovis and M. caprae",bacterial,direct contact
+a296,"Animal tuberculosis (TB) caused by Mycobacterium tuberculosis complex bacteria, including M. bovis and M. caprae",bacterial,indirect contact
+a296,"Animal tuberculosis (TB) caused by Mycobacterium tuberculosis complex bacteria, including M. bovis and M. caprae",bacterial,environmental
+a296,"Animal tuberculosis (TB) caused by Mycobacterium tuberculosis complex bacteria, including M. bovis and M. caprae",bacterial,foodborne
+a296,"Animal tuberculosis (TB) caused by Mycobacterium tuberculosis complex bacteria, including M. bovis and M. caprae",bacterial,waterborne
+a3,Bovine tuberculosis (Mycobacterium bovis),bacterial,environmental
+a3,Bovine tuberculosis (Mycobacterium bovis),bacterial,direct contact
+a3,Foot-and-mouth disease,viral,direct contact
+a3,Foot-and-mouth disease,viral,environmental
+a3,Brucellosis (Brucella abortus),bacterial,direct contact
+a3,Rift Valley fever,viral,vector-borne
+a3,Rift Valley fever,viral,direct contact
+a3,Theileriosis (Theileria parva),parasitic,vector-borne
+a3,Lumpy skin disease,viral,vector-borne
+a305,Avian influenza (H5N1/highly pathogenic avian influenza),viral,direct contact
+a305,Avian influenza (H5N1/highly pathogenic avian influenza),viral,environmental
+a305,Avian influenza (H5N1/highly pathogenic avian influenza),viral,indirect contact
+a309,Theileria velifera,parasitic,vector-borne
+a309,Theileria mutans,parasitic,vector-borne
+a309,Theileria parva,parasitic,vector-borne
+a309,Theileria taurotragi,parasitic,vector-borne
+a309,Theileria sp. (buffalo),parasitic,vector-borne
+a309,Theileria sp. (bougasvlei),parasitic,vector-borne
+a309,Theileria sp. (sable),parasitic,vector-borne
+a309,Theileria sp. (waterbuck),parasitic,vector-borne
+a309,Theileria sp. (tsessebe),parasitic,vector-borne
+a309,Theileria sp. (giraffe),parasitic,vector-borne
+a309,Theileria sp. (bongo),parasitic,vector-borne
+a309,Babesia bigemina,parasitic,vector-borne
+a309,Babesia sp.,parasitic,vector-borne
+a309,Babesia occultans,parasitic,vector-borne
+a309,Hepatozoon canis,parasitic,ingestion of infected vectors (ticks)
+a309,Hepatozoon sp.,parasitic,ingestion of infected vectors (ticks)
+a309,Colpodellidae,parasitic,NA
+a310,H5N1 avian influenza,viral,direct contact
+a311,Non-tuberculous mycobacteria (NTM) infections,bacterial,environmental
+a311,Bovine tuberculosis,bacterial,NA
+a317,Echinococcosis,parasitic,environmental
+a317,Echinococcosis,parasitic,faecal-oral
+a317,Cystic echinococcosis (CE),parasitic,environmental
+a317,Cystic echinococcosis (CE),parasitic,faecal-oral
+a317,Alveolar echinococcosis (AE),parasitic,environmental
+a317,Alveolar echinococcosis (AE),parasitic,faecal-oral
+a317,Echinococcus granulosus sensu stricto,parasitic,environmental
+a317,Echinococcus granulosus sensu stricto,parasitic,faecal-oral
+a317,Echinococcus equinus,parasitic,environmental
+a317,Echinococcus equinus,parasitic,faecal-oral
+a317,Echinococcus ortleppi,parasitic,environmental
+a317,Echinococcus ortleppi,parasitic,faecal-oral
+a317,Echinococcus canadensis,parasitic,environmental
+a317,Echinococcus canadensis,parasitic,faecal-oral
+a317,Echinococcus felidis,parasitic,environmental
+a317,Echinococcus felidis,parasitic,faecal-oral
+a317,Echinococcus multilocularis,parasitic,environmental
+a317,Echinococcus multilocularis,parasitic,faecal-oral
+a317,Echinococcus oligarthrus,parasitic,environmental
+a317,Echinococcus oligarthrus,parasitic,faecal-oral
+a317,Echinococcus shiquicus,parasitic,environmental
+a317,Echinococcus shiquicus,parasitic,faecal-oral
+a317,Echinococcus vogeli,parasitic,environmental
+a317,Echinococcus vogeli,parasitic,faecal-oral
+a321,Feline foamy virus (FFV) infection,viral,direct contact
+a322,Rickettsia spp. (including Rickettsia massiliae and Rickettsia conorii),bacterial,vector-borne
+a322,Ehrlichia canis,bacterial,vector-borne
+a322,"Bartonella spp. (including Bartonella clarridgeiae, Bartonella henselae, and Bartonella rochalimae)",bacterial,vector-borne
+a322,Coxiella burnetii,bacterial,vector-borne
+a322,Babesia vogeli,parasitic,vector-borne
+a322,Theileria annae,parasitic,vector-borne
+a324,"Avian influenza (AI), including low pathogenic avian influenza (LPAI) and highly pathogenic avian influenza (HPAI)",viral,direct contact
+a324,"Avian influenza (AI), including low pathogenic avian influenza (LPAI) and highly pathogenic avian influenza (HPAI)",viral,environmental
+a324,"Avian influenza (AI), including low pathogenic avian influenza (LPAI) and highly pathogenic avian influenza (HPAI)",viral,waterborne
+a324,"Avian influenza (AI), including low pathogenic avian influenza (LPAI) and highly pathogenic avian influenza (HPAI)",viral,foodborne
+a324,"Avian influenza (AI), including low pathogenic avian influenza (LPAI) and highly pathogenic avian influenza (HPAI)",viral,indirect contact
+a328,Foot-and-mouth disease,viral,direct contact
+a332,Bovine tuberculosis (BTB),bacterial,foodborne
+a332,Bovine tuberculosis (BTB),bacterial,direct contact
+a332,Mycobacterium avium complex (MAC),bacterial,NA
+a332,Nontuberculous mycobacteria (NTM),bacterial,NA
+a332,Tuberculosis caused by Mycobacterium tuberculosis,bacterial,NA
+a334,Anthrax (Bacillus anthracis),bacterial,environmental
+a334,Anthrax (Bacillus anthracis),bacterial,foodborne
+a34,Mycobacterium avium subspecies paratuberculosis infection (paratuberculosis),bacterial,faecal-oral
+a34,Mycobacterium avium subspecies paratuberculosis infection (paratuberculosis),bacterial,environmental
+a343,animal tuberculosis (TB) caused by Mycobacterium bovis,bacterial,aerosol
+a343,animal tuberculosis (TB) caused by Mycobacterium bovis,bacterial,direct contact
+a343,animal tuberculosis (TB) caused by Mycobacterium bovis,bacterial,environmental
+a343,animal tuberculosis (TB) caused by Mycobacterium bovis,bacterial,indirect contact
+a345,Bovine tuberculosis (bTB),bacterial,aerosol
+a345,Bovine tuberculosis (bTB),bacterial,direct contact
+a345,Bovine tuberculosis (bTB),bacterial,environmental
+a345,Bovine tuberculosis (bTB),bacterial,indirect contact
+a353,"Highly pathogenic avian influenza virus (HPAIV), including H5N1 HPAIV",viral,NA
+a353,Avian influenza virus (AIV),viral,NA
+a358,Cryptosporidium ubiquitum,parasitic,direct contact
+a358,Cryptosporidium ubiquitum,parasitic,indirect contact
+a358,Cryptosporidium ubiquitum,parasitic,environmental
+a358,Cryptosporidium bovis,parasitic,direct contact
+a358,Cryptosporidium bovis,parasitic,indirect contact
+a358,Cryptosporidium bovis,parasitic,environmental
+a358,Cryptosporidium andersoni,parasitic,NA
+a360,highly pathogenic avian influenza H5N8 virus (clade 2.3.4.4b),viral,NA
+a363,African swine fever,viral,direct contact
+a363,African swine fever,viral,indirect contact
+a363,African swine fever,viral,environmental
+a363,African swine fever,viral,vector-borne
+a373,Bovine tuberculosis (BTB),bacterial,aerosol
+a373,Bovine tuberculosis (BTB),bacterial,direct contact
+a373,Bovine tuberculosis (BTB),bacterial,environmental
+a376,Brucellosis / Brucella infection,bacterial,direct contact
+a376,Brucellosis / Brucella infection,bacterial,indirect contact
+a376,Brucellosis / Brucella infection,bacterial,aerosol
+a376,Brucellosis / Brucella infection,bacterial,environmental
+a377,Spotted fever group rickettsial infections,bacterial,vector-borne
+a379,Highly pathogenic avian influenza,viral,direct contact
+a379,Highly pathogenic avian influenza,viral,indirect contact
+a379,Newcastle disease,viral,direct contact
+a379,Newcastle disease,viral,indirect contact
+a379,West Nile fever,viral,vector-borne
+a379,Rabbit haemorrhagic disease,viral,direct contact
+a379,African swine fever,viral,direct contact
+a379,Classical swine fever,viral,direct contact
+a379,Aujeszky's disease,viral,direct contact
+a379,Bluetongue,viral,vector-borne
+a379,Bovine viral diarrhea,viral,NA
+a379,Alphaherpesvirus infections,viral,NA
+a379,Malignant catarrhal fever,viral,NA
+a379,Rabies,viral,direct contact
+a379,Canine distemper,viral,direct contact
+a379,Salmonellosis,bacterial,environmental
+a379,Salmonellosis,bacterial,indirect contact
+a379,Tuberculosis,bacterial,direct contact
+a379,Paratuberculosis (Johne's disease),bacterial,NA
+a379,Brucellosis (Brucella abortus and Brucella melitensis),bacterial,direct contact
+a379,Swine brucellosis,bacterial,direct contact
+a379,Tularemia,bacterial,direct contact
+a379,Infectious keratoconjunctivitis,bacterial,direct contact
+a379,Trichinellosis,parasitic,foodborne
+a379,Leishmaniosis,parasitic,vector-borne
+a379,Echinococcosis/hydatidosis,parasitic,foodborne
+a379,Echinococcosis/hydatidosis,parasitic,faecal-oral
+a379,Sarcoptic mange,parasitic,direct contact
+a379,Trichomonosis,parasitic,direct contact
+a379,Toxoplasmosis,parasitic,NA
+a379,Tick-borne diseases,unclear,vector-borne
+a379,Chronic wasting disease,prion,NA
+a379,Rift Valley fever,viral,vector-borne
+a379,Pestivirus disease in Pyrenean chamois,viral,NA
+a384,bovine tuberculosis (bTB),bacterial,NA
+a386,Babesia divergens/Babesia divergens-like,parasitic,vector-borne
+a386,Babesia capreoli,parasitic,vector-borne
+a386,Babesia venatorum,parasitic,vector-borne
+a386,Babesia cf. odocoilei,parasitic,vector-borne
+a40,Anthrax,unclear,direct contact
+a40,Anthrax,unclear,environmental
+a40,Aujeszky’s disease,unclear,direct contact
+a40,Aujeszky’s disease,unclear,indirect contact
+a40,Avian chlamydiosis,unclear,direct contact
+a40,Avian chlamydiosis,unclear,indirect contact
+a40,Avian infectious bronchitis,unclear,direct contact
+a40,Avian infectious bronchitis,unclear,indirect contact
+a40,Avian influenza,viral,direct contact
+a40,Avian influenza,viral,indirect contact
+a40,"Avian mycoplasmosis (Mycoplasma gallisepticum, Mycoplasma synoviae)",bacterial,direct contact
+a40,"Avian mycoplasmosis (Mycoplasma gallisepticum, Mycoplasma synoviae)",bacterial,indirect contact
+a40,Bluetongue,unclear,vector-borne
+a40,Bovine anaplasmosis,unclear,vector-borne
+a40,Bovine babesiosis,parasitic,vector-borne
+a40,Bovine genital campylobacteriosis,unclear,direct contact
+a40,Bovine genital campylobacteriosis,unclear,indirect contact
+a40,Bovine tuberculosis,bacterial,direct contact
+a40,Bovine tuberculosis,bacterial,indirect contact
+a40,Bovine viral diarrhea,viral,direct contact
+a40,Bovine viral diarrhea,viral,indirect contact
+a40,Brucellosis (Brucella abortus),bacterial,direct contact
+a40,Brucellosis (Brucella abortus),bacterial,indirect contact
+a40,Brucellosis (Brucella ovis),bacterial,direct contact
+a40,Brucellosis (Brucella ovis),bacterial,indirect contact
+a40,Brucellosis (Brucella suis),bacterial,direct contact
+a40,Brucellosis (Brucella suis),bacterial,indirect contact
+a40,Contagious agalactia,unclear,direct contact
+a40,Contagious agalactia,unclear,indirect contact
+a40,Echinococcosis/hydatidosis,unclear,indirect contact
+a40,Epizootic hemorrhagic disease,viral,vector-borne
+a40,Equine encephalomyelitis (Eastern and Western),unclear,vector-borne
+a40,Equine influenza,viral,direct contact
+a40,Equine influenza,viral,indirect contact
+a40,Equine piroplasmosis,unclear,vector-borne
+a40,Equine rhinopneumonitis,unclear,direct contact
+a40,Equine rhinopneumonitis,unclear,indirect contact
+a40,Fowl cholera,unclear,direct contact
+a40,Fowl cholera,unclear,indirect contact
+a40,Infectious bovine rhinotracheitis/infectious pustular vulvovaginitis,unclear,direct contact
+a40,Infectious bovine rhinotracheitis/infectious pustular vulvovaginitis,unclear,indirect contact
+a40,Infectious bursal disease,unclear,direct contact
+a40,Infectious bursal disease,unclear,indirect contact
+a40,Leptospirosis,unclear,direct contact
+a40,Leptospirosis,unclear,indirect contact
+a40,Maedi-visna,unclear,direct contact
+a40,Maedi-visna,unclear,indirect contact
+a40,Marek’s disease,unclear,direct contact
+a40,Marek’s disease,unclear,indirect contact
+a40,Myxomatosis,unclear,vector-borne
+a40,Newcastle disease,unclear,direct contact
+a40,Newcastle disease,unclear,indirect contact
+a40,Paratuberculosis,unclear,direct contact
+a40,Paratuberculosis,unclear,indirect contact
+a40,Porcine reproductive and respiratory syndrome,unclear,direct contact
+a40,Porcine reproductive and respiratory syndrome,unclear,indirect contact
+a40,Pullorum disease,unclear,direct contact
+a40,Pullorum disease,unclear,indirect contact
+a40,Q fever,unclear,direct contact
+a40,Q fever,unclear,indirect contact
+a40,Q fever,unclear,vector-borne
+a40,Rabbit hemorrhagic disease,unclear,direct contact
+a40,Rabbit hemorrhagic disease,unclear,indirect contact
+a40,Rabies,unclear,direct contact
+a40,Transmissible gastroenteritis,unclear,direct contact
+a40,Transmissible gastroenteritis,unclear,indirect contact
+a40,Trichinellosis,unclear,direct contact
+a40,Trichinellosis,unclear,indirect contact
+a40,Tularemia,unclear,direct contact
+a40,Tularemia,unclear,indirect contact
+a40,Tularemia,unclear,vector-borne
+a40,Vesicular stomatitis,unclear,direct contact
+a40,Vesicular stomatitis,unclear,indirect contact
+a40,Vesicular stomatitis,unclear,vector-borne
+a40,West Nile,unclear,vector-borne
+a40,Chronic Wasting Disease,prion,direct contact
+a40,Chronic Wasting Disease,prion,indirect contact
+a40,Malignant Catarrhal Fever,unclear,direct contact
+a40,Plague,unclear,direct contact
+a40,Plague,unclear,indirect contact
+a40,Plague,unclear,vector-borne
+a40,Trichomoniasis (Trichomonas gallinae),parasitic,direct contact
+a40,Trichomoniasis (Trichomonas gallinae),parasitic,indirect contact
+a405,animal tuberculosis caused by Mycobacterium bovis,bacterial,direct contact
+a405,animal tuberculosis caused by Mycobacterium bovis,bacterial,indirect contact
+a407,African swine fever (ASF),viral,direct contact
+a407,African swine fever (ASF),viral,indirect contact
+a408,"Hepatitis E virus infection (HEV), including genotype 3",viral,foodborne
+a408,"Hepatitis E virus infection (HEV), including genotype 3",viral,direct contact
+a408,"Hepatitis E virus infection (HEV), including genotype 3",viral,indirect contact
+a41,Avian influenza,viral,direct contact
+a41,Avian influenza,viral,environmental
+a41,Newcastle disease,viral,direct contact
+a41,Newcastle disease,viral,environmental
+a41,Mycoplasma gallisepticum,bacterial,NA
+a41,Mycoplasma synoviae,bacterial,NA
+a41,Bordetella avium,bacterial,NA
+a41,Pasteurella multocida,bacterial,NA
+a41,Avian encephalomyelitis virus,viral,NA
+a41,Avian reovirus,viral,NA
+a41,Avian lymphoid leukosis virus,viral,NA
+a41,Fowl adenovirus-4,viral,NA
+a41,Infectious bronchitis virus,viral,NA
+a41,Infectious bursal disease virus,viral,NA
+a41,Marek’s disease virus,viral,NA
+a41,Reticuloendotheliosis viruses,viral,NA
+a41,Avian poxvirus,viral,NA
+a41,Chlamydia spp.,bacterial,NA
+a41,Escherichia coli,bacterial,NA
+a41,Salmonella spp.,bacterial,NA
+a41,Coccidia,parasitic,NA
+a41,Canarypox,viral,NA
+a410,Mycobacterium bovis infection (bovine tuberculosis),bacterial,aerosol
+a410,Mycobacterium bovis infection (bovine tuberculosis),bacterial,direct contact
+a410,Mycobacterium bovis infection (bovine tuberculosis),bacterial,indirect contact
+a415,African swine fever,viral,vector-borne
+a417,Strongyle sp.,parasitic,environmental
+a417,Trichostrongylus sp.,parasitic,environmental
+a417,Fasciola sp.,parasitic,environmental
+a417,Moniezia sp.,parasitic,environmental
+a417,Amphistome,parasitic,environmental
+a418,Avian influenza (including highly pathogenic avian influenza and low pathogenic avian influenza; influenza A viruses),viral,aerosol
+a418,Avian influenza (including highly pathogenic avian influenza and low pathogenic avian influenza; influenza A viruses),viral,indirect contact
+a42,Bartonella sp.,bacterial,vector-borne
+a42,Toxoplasma gondii,parasitic,environmental
+a42,Toxoplasma gondii,parasitic,foodborne
+a42,Feline immunodeficiency virus (FIV),viral,direct contact
+a42,Feline herpesvirus-1 (FHV-1),viral,direct contact
+a42,Feline panleukopenia virus (FPV),viral,direct contact
+a42,Feline panleukopenia virus (FPV),viral,environmental
+a42,Feline calicivirus (FCV),viral,direct contact
+a421,Mycoplasma gallisepticum (MG),bacterial,NA
+a421,Novel Starling mycoplasma (MG-like Mycoplasma species),bacterial,environmental
+a430,Bluetongue virus (BTV),viral,vector-borne
+a430,Schmallenberg virus (SBV),viral,vector-borne
+a431,foot-and-mouth disease (FMD),viral,direct contact
+a431,foot-and-mouth disease (FMD),viral,aerosol
+a440,salmonellosis,bacterial,foodborne
+a440,salmonellosis,bacterial,direct contact
+a440,salmonellosis,bacterial,environmental
+a442,Malaria,parasitic,vector-borne
+a442,Dengue,viral,vector-borne
+a442,Zika,viral,vector-borne
+a442,Chikungunya,viral,vector-borne
+a442,Tuberculosis,bacterial,indirect contact
+a442,Leptospirosis,bacterial,unclear
+a442,Toxoplasma gondii infection,parasitic,NA
+a442,Giardia lamblia infection,parasitic,NA
+a442,Entamoeba histolytica infection,parasitic,NA
+a442,Entamoeba dispar infection,parasitic,NA
+a442,Enteric bacterial infections,bacterial,indirect contact
+a442,Intestinal parasitic infections,parasitic,NA
+a444,Foot and mouth disease (FMD),viral,NA
+a444,Rabies,viral,NA
+a444,Listeriosis,bacterial,foodborne
+a444,Tuberculosis (TB),bacterial,aerosol
+a444,Anthrax,bacterial,environmental
+a444,Campylobacteriosis,bacterial,foodborne
+a446,Fascioloides magna infection (giant liver fluke),parasitic,environmental
+a452,Leptospirosis,bacterial,environmental
+a452,Leptospirosis,bacterial,foodborne
+a452,Leptospirosis,bacterial,direct contact
+a452,Leptospirosis,bacterial,vertical
+a452,Leptospirosis,bacterial,indirect contact
+a452,Tularemia,bacterial,NA
+a452,Dermatophytosis,fungal,direct contact
+a452,Dermatophytosis,fungal,indirect contact
+a452,Histoplasmosis,fungal,environmental
+a452,Skrjabingylus chitwoodorum infection,parasitic,foodborne
+a452,Skrjabingylus chitwoodorum infection,parasitic,environmental
+a452,Rabies,viral,direct contact
+a452,Canine distemper virus infection,viral,NA
+a471,Avian influenza virus (AIV) hemagglutinin sero-subtypes,viral,NA
+a478,Low pathogenic avian influenza H7N7,viral,faecal-oral
+a478,Highly pathogenic avian influenza H5N1,viral,NA
+a478,Low pathogenic avian influenza H9N2,viral,faecal-oral
+a483,"Avian influenza (AI) / avian influenza viruses (AIVs), including highly pathogenic avian influenza viruses (HPAIVs)",viral,direct contact
+a495,foot-and-mouth disease,viral,direct contact
+a496,Brucellosis,bacterial,direct contact
+a496,Brucellosis,bacterial,indirect contact
+a496,Brucellosis,bacterial,foodborne
+a5,African Swine Fever (ASF),viral,direct contact
+a5,African Swine Fever (ASF),viral,indirect contact
+a5,African Swine Fever (ASF),viral,environmental
+a507,Leptospirosis,bacterial,environmental
+a509,avian influenza A(H5N6),viral,indirect contact
+a509,avian influenza A(H5N6),viral,environmental
+a514,Salmonella enterica serovar Dublin infection,bacterial,foodborne
+a514,Salmonella enterica serovar Dublin infection,bacterial,waterborne
+a514,Salmonella enterica serovar Abony infection,bacterial,NA
+a514,Salmonella enterica serovar Typhimurium infection,bacterial,NA
+a514,Salmonella enterica subspecies diarizonae infection,bacterial,NA
+a514,Monophasic strain of Salmonella group B infection,bacterial,NA
+a518,Rabies,viral,direct contact
+a526,Foot-and-mouth disease virus (FMDV) serotypes O and A,viral,direct contact
+a527,Crimean Congo hemorrhagic fever virus (CCHFV),viral,vector-borne
+a527,Crimean Congo hemorrhagic fever virus (CCHFV),viral,direct contact
+a54,Highly pathogenic avian influenza (HPAI) H5 viruses,viral,direct contact
+a54,Highly pathogenic avian influenza (HPAI) H5 viruses,viral,indirect contact
+a54,Highly pathogenic avian influenza (HPAI) H5 viruses,viral,faecal-oral
+a54,Highly pathogenic avian influenza (HPAI) H5 viruses,viral,environmental
+a54,Low pathogenic avian influenza (LPAI) viruses,viral,direct contact
+a54,Low pathogenic avian influenza (LPAI) viruses,viral,indirect contact
+a54,Low pathogenic avian influenza (LPAI) viruses,viral,faecal-oral
+a54,Low pathogenic avian influenza (LPAI) viruses,viral,environmental
+a55,African swine fever (ASF),viral,direct contact
+a55,African swine fever (ASF),viral,indirect contact
+a55,African swine fever (ASF),viral,vector-borne
+a55,African swine fever (ASF),viral,environmental
+a55,African swine fever (ASF),viral,foodborne
+a55,African swine fever (ASF),viral,waterborne
+a555,Q fever,bacterial,aerosol
+a555,Q fever,bacterial,environmental
+a555,Q fever,bacterial,direct contact
+a56,Infectious keratoconjunctivitis (IKC) / Mycoplasma conjunctivae infection,bacterial,NA
+a562,tuberculosis (TB),unclear,direct contact
+a563,Foot and Mouth disease (FMD),viral,direct contact
+a563,Foot and Mouth disease (FMD),viral,indirect contact
+a569,Usutu virus,viral,vector-borne
+a569,Echinococcus multilocularis,parasitic,NA
+a569,West Nile virus,viral,NA
+a569,Trichinella sp.,parasitic,NA
+a569,Toxoplasma gondii,parasitic,NA
+a569,Salmonella sp.,bacterial,foodborne
+a569,Mycobacterium caprae,bacterial,foodborne
+a569,Mycobacterium avium subsp. paratuberculosis,bacterial,foodborne
+a569,Fascioloides magna,parasitic,NA
+a569,Anaplasma phagocytophilum,bacterial,NA
+a569,Francisella tularensis,bacterial,foodborne
+a569,Neospora caninum,parasitic,NA
+a569,methicillin-resistant Staphylococcus aureus,bacterial,foodborne
+a569,Batrachochytrium dendrobatidis,fungal,NA
+a569,avian Borna disease virus,viral,NA
+a569,avian pox virus,viral,NA
+a569,distemper virus,viral,NA
+a569,Hantavirus/Puumala virus,viral,NA
+a569,avian influenza virus,viral,NA
+a569,bovine spongiform encephalopathy,prion,NA
+a569,chronic wasting disease,prion,NA
+a569,classical swine fever,viral,NA
+a569,Aujeszky disease,viral,NA
+a569,bovine viral diarrhea,viral,NA
+a569,paratuberculosis,bacterial,NA
+a569,African swine fever,viral,NA
+a569,avian botulism,bacterial,NA
+a569,Clostridium botulinum,bacterial,NA
+a571,Chlamydia trachomatis infections (including trachoma and sexually transmitted infection),bacterial,direct contact
+a571,Chlamydia trachomatis infections (including trachoma and sexually transmitted infection),bacterial,indirect contact
+a571,Chlamydia trachomatis infections (including trachoma and sexually transmitted infection),bacterial,vector-borne
+a571,Chlamydia pneumoniae infection,bacterial,NA
+a571,Chlamydia psittaci infection (psittacosis),bacterial,direct contact
+a571,Chlamydia psittaci infection (psittacosis),bacterial,indirect contact
+a571,Chlamydia pecorum infection (chlamydiosis),bacterial,direct contact
+a571,Chlamydia abortus infection,bacterial,NA
+a571,Protochlamydia amoebophila infection,bacterial,NA
+a571,Chlamydia suis infection,bacterial,NA
+a571,Chlamydia gallinacea infection,bacterial,NA
+a571,Chlamydia felis infection,bacterial,NA
+a571,Chlamydia caviae infection,bacterial,NA
+a571,Epitheliocystis associated with chlamydia-like organisms,bacterial,NA
+a572,Trypanosomiasis,NA,vector-borne
+a572,Nagana,NA,vector-borne
+a572,Human sleeping sickness,NA,vector-borne
+a572,Foot and mouth disease,NA,NA
+a572,Bovine tuberculosis,NA,NA
+a572,Brucellosis,NA,NA
+a572,Canine distemper virus,viral,NA
+a572,Contagious bovine pleuropneumonia,NA,NA
+a572,Malignant catarrhal fever,NA,NA
+a572,Rift Valley fever,NA,NA
+a572,Anthrax,NA,NA
+a572,Rabies,NA,NA
+a572,African swine fever,NA,NA
+a572,African horse sickness,NA,NA
+a572,Theileriosis,NA,NA
+a572,Heartwater,NA,NA
+a572,Echinococcosis and cysticercosis,NA,NA
+a574,Rabies,unclear,direct contact
+a574,Anthrax,unclear,foodborne
+a574,Anthrax,unclear,direct contact
+a574,Anthrax,unclear,aerosol
+a574,Anthrax,unclear,environmental
+a574,Brucellosis,unclear,foodborne
+a574,Brucellosis,unclear,direct contact
+a574,Brucellosis,unclear,environmental
+a574,Rift Valley fever,unclear,NA
+a574,Bovine tuberculosis,unclear,foodborne
+a574,Bovine tuberculosis,unclear,aerosol
+a574,Human African trypanosomiasis,unclear,NA
+a574,Porcine taeniasis,unclear,NA
+a574,Leptospirosis,unclear,NA
+a574,Yersiniosis (bubonic plague),unclear,NA
+a574,Salmonellosis,unclear,NA
+a574,Sparganosis,unclear,NA
+a576,Foot and mouth disease,viral,NA
+a58,Anaplasmosis / Anaplasma spp. infection,bacterial,NA
+a580,Q fever (Coxiella burnetii infection),bacterial,vector-borne
+a583,SAT2 foot-and-mouth disease,viral,direct contact
+a602,Fasciolosis due to Fasciola hepatica,parasitic,environmental
+a603,bovine tuberculosis (BTB) caused by Mycobacterium bovis,bacterial,aerosol
+a603,bovine tuberculosis (BTB) caused by Mycobacterium bovis,bacterial,foodborne
+a603,bovine tuberculosis (BTB) caused by Mycobacterium bovis,bacterial,direct contact
+a603,bovine tuberculosis (BTB) caused by Mycobacterium bovis,bacterial,environmental
+a603,bovine tuberculosis (BTB) caused by Mycobacterium bovis,bacterial,indirect contact
+a607,Foot-and-mouth disease,viral,direct contact
+a607,Foot-and-mouth disease,viral,aerosol
+a607,Foot-and-mouth disease,viral,indirect contact
+a607,Corridor disease (theileriosis),parasitic,NA
+a607,African trypanosomosis,parasitic,vector-borne
+a607,Bovine tuberculosis,bacterial,direct contact
+a607,Bovine tuberculosis,bacterial,environmental
+a607,Bovine tuberculosis,bacterial,indirect contact
+a607,Bovine brucellosis,bacterial,direct contact
+a607,Rinderpest,viral,NA
+a607,Anthrax,bacterial,environmental
+a607,Anthrax,bacterial,waterborne
+a607,Anthrax,bacterial,indirect contact
+a607,Rift Valley fever,viral,vector-borne
+a61,"Avian influenza virus infection, including highly pathogenic H5N1 avian influenza virus (clade 2.3.4.4b) and low-pathogenicity avian influenza viruses",viral,environmental
+a617,COVID-19 / SARS-CoV-2 infection,viral,aerosol
+a617,COVID-19 / SARS-CoV-2 infection,viral,direct contact
+a618,Rift Valley fever (RVF) / Rift Valley fever virus (RVFV) infection,viral,vector-borne
+a618,Rift Valley fever (RVF) / Rift Valley fever virus (RVFV) infection,viral,vertical
+a618,Rift Valley fever (RVF) / Rift Valley fever virus (RVFV) infection,viral,direct contact
+a619,Brucellosis,bacterial,direct contact
+a619,Brucellosis,bacterial,foodborne
+a619,Brucellosis,bacterial,aerosol
+a619,Brucellosis,bacterial,indirect contact
+a62,coronaviruses (CoVs),viral,direct contact
+a62,coronaviruses (CoVs),viral,indirect contact
+a62,coronaviruses (CoVs),viral,environmental
+a622,Japanese encephalitis virus (JEV),viral,vector-borne
+a623,Salmonella spp.,bacterial,direct contact
+a623,Salmonella spp.,bacterial,indirect contact
+a623,Salmonella spp.,bacterial,environmental
+a623,Staphylococcus spp.,bacterial,direct contact
+a623,Staphylococcus spp.,bacterial,indirect contact
+a623,Staphylococcus spp.,bacterial,environmental
+a625,Bovine tuberculosis (BTB; Mycobacterium bovis),bacterial,NA
+a625,Bovine brucellosis (Brucella abortus),bacterial,NA
+a628,"Brucellosis (Brucella spp., including Brucella suis biovar 4, Brucella abortus, Brucella canis, and Brucella melitensis)",bacterial,direct contact
+a628,"Brucellosis (Brucella spp., including Brucella suis biovar 4, Brucella abortus, Brucella canis, and Brucella melitensis)",bacterial,environmental
+a628,"Brucellosis (Brucella spp., including Brucella suis biovar 4, Brucella abortus, Brucella canis, and Brucella melitensis)",bacterial,vertical
+a628,"Brucellosis (Brucella spp., including Brucella suis biovar 4, Brucella abortus, Brucella canis, and Brucella melitensis)",bacterial,foodborne
+a628,"Brucellosis (Brucella spp., including Brucella suis biovar 4, Brucella abortus, Brucella canis, and Brucella melitensis)",bacterial,vector-borne
+a630,foot-and-mouth disease virus (FMDV),viral,direct contact
+a630,foot-and-mouth disease virus (FMDV),viral,environmental
+a630,foot-and-mouth disease virus (FMDV),viral,indirect contact
+a630,foot-and-mouth disease virus (FMDV),viral,sexual contact
+a630,Brucella spp.,bacterial,direct contact
+a630,Brucella spp.,bacterial,environmental
+a630,Brucella spp.,bacterial,indirect contact
+a630,Leptospira spp.,bacterial,direct contact
+a630,Leptospira spp.,bacterial,environmental
+a630,Leptospira spp.,bacterial,indirect contact
+a630,Coxiella burnetii,bacterial,direct contact
+a630,Coxiella burnetii,bacterial,environmental
+a630,Coxiella burnetii,bacterial,indirect contact
+a630,Coxiella burnetii,bacterial,sexual contact
+a636,tuberculosis (TB),bacterial,NA
+a637,human-shared pathogens and endoparasites,unclear,NA
+a639,Avian influenza A(H9N2),viral,direct contact
+a639,Avian influenza A(H9N2),viral,indirect contact
+a639,Avian influenza A(H9N2),viral,environmental
+a639,Avian influenza A(H9N2),viral,waterborne
+a639,Newcastle disease virus infection,viral,NA
+a64,Anthrax,bacterial,environmental
+a65,bacterial pathogens,bacterial,unclear
+a651,rabies,NA,NA
+a651,bovine tuberculosis (bTB),NA,NA
+a651,plague,NA,NA
+a651,foot and mouth disease (FMD),NA,NA
+a651,parapoxvirus,viral,NA
+a651,hantavirus,viral,NA
+a651,classical swine fever (CSF),NA,NA
+a651,protozoan pathogens,parasitic,NA
+a651,fungal pathogens,fungal,NA
+a651,macroparasites,parasitic,NA
+a655,Highly pathogenic avian influenza H5N1,viral,environmental
+a655,Highly pathogenic avian influenza H5N1,viral,indirect contact
+a655,Low pathogenic avian influenza H7N9,viral,NA
+a655,Highly pathogenic avian influenza H5N6,viral,NA
+a655,Highly pathogenic avian influenza H5N8,viral,NA
+a658,cutaneous leishmaniasis,parasitic,vector-borne
+a658,visceral leishmaniasis,parasitic,vector-borne
+a659,Brucellosis,bacterial,direct contact
+a659,Brucellosis,bacterial,indirect contact
+a659,Brucellosis,bacterial,foodborne
+a67,Foot and mouth disease,viral,direct contact
+a67,Foot and mouth disease,viral,aerosol
+a67,Foot and mouth disease,viral,indirect contact
+a67,Trypanosomosis,parasitic,vector-borne
+a67,African swine fever,viral,vector-borne
+a67,African swine fever,viral,direct contact
+a67,African swine fever,viral,foodborne
+a67,Theileriosis or Corridor disease,parasitic,vector-borne
+a67,Heartwater (Cowdria ruminantium),bacterial,vector-borne
+a67,African horse sickness,viral,vector-borne
+a67,Rift Valley fever,viral,vector-borne
+a67,Bluetongue,viral,vector-borne
+a67,Lumpy skin disease,viral,vector-borne
+a67,Malignant catarrhal fever,viral,direct contact
+a67,Newcastle disease,viral,direct contact
+a67,Classical swine fever,viral,direct contact
+a67,Classical swine fever,viral,foodborne
+a67,Anthrax,bacterial,foodborne
+a67,Anthrax,bacterial,waterborne
+a67,Anthrax,bacterial,vector-borne
+a67,Anthrax,bacterial,environmental
+a67,Rabies,viral,direct contact
+a67,Brucellosis,bacterial,direct contact
+a67,Encephalomyocarditis,viral,faecal-oral
+a67,Encephalomyocarditis,viral,waterborne
+a67,Encephalomyocarditis,viral,indirect contact
+a67,Epizootic haemorrhagic disease of cervids,viral,vector-borne
+a67,Rinderpest,viral,direct contact
+a67,Rinderpest,viral,aerosol
+a67,Rinderpest,viral,indirect contact
+a67,Bovine tuberculosis,bacterial,direct contact
+a67,Bovine tuberculosis,bacterial,aerosol
+a67,Bovine tuberculosis,bacterial,indirect contact
+a67,Canine distemper,viral,direct contact
+a67,Canine distemper,viral,aerosol
+a67,Canine distemper,viral,indirect contact
+a67,West Nile virus,viral,NA
+a67,Parafilariasis,parasitic,vector-borne
+a67,Feline immunodeficiency virus infection,viral,NA
+a67,Chronic wasting disease,prion,NA
+a677,Staphylococcus aureus,bacterial,direct contact
+a677,Staphylococcus aureus,bacterial,indirect contact
+a681,Rocky Mountain spotted fever (RMSF; Rickettsia rickettsii),bacterial,vector-borne
+a681,Spotted fever group rickettsiae,bacterial,vector-borne
+a681,Typhus group rickettsiae,bacterial,NA
+a690,Johne’s disease (paratuberculosis) caused by Mycobacterium avium subspecies paratuberculosis (MAP),bacterial,faecal-oral
+a694,Anthrax (Bacillus anthracis infection),bacterial,direct contact
+a694,Anthrax (Bacillus anthracis infection),bacterial,environmental
+a696,trichinellosis (Trichinella spp.; T. britovi and T. nelsoni detected),parasitic,foodborne
+a699,Bovine tuberculosis,bacterial,aerosol
+a699,Bovine tuberculosis,bacterial,foodborne
+a699,Rift Valley fever,viral,vector-borne
+a699,Rift Valley fever,viral,direct contact
+a699,Rift Valley fever,viral,foodborne
+a699,Brucellosis,bacterial,direct contact
+a699,Brucellosis,bacterial,foodborne
+a699,Cryptosporidiosis,parasitic,faecal-oral
+a699,Cryptosporidiosis,parasitic,direct contact
+a699,Cryptosporidiosis,parasitic,foodborne
+a699,Cryptosporidiosis,parasitic,waterborne
+a699,Schistosomiasis,parasitic,waterborne
+a70,Viruses,viral,NA
+a70,Coronaviruses (CoVs),viral,NA
+a700,Toxoplasmosis (Toxoplasma gondii infection),parasitic,environmental
+a700,Toxoplasmosis (Toxoplasma gondii infection),parasitic,vertical
+a700,Toxoplasmosis (Toxoplasma gondii infection),parasitic,foodborne
+a708,Infectious hematopoietic necrosis virus (IHNV),viral,environmental
+a708,Infectious hematopoietic necrosis virus (IHNV),viral,foodborne
+a708,Viral hemorrhagic septicemia virus (VHSV),viral,environmental
+a708,Viral hemorrhagic septicemia virus (VHSV),viral,foodborne
+a708,Hirame rhabdovirus (HIRRV),viral,environmental
+a708,Striped jack nervous necrosis virus (SJNNV),viral,vertical
+a708,Striped jack nervous necrosis virus (SJNNV),viral,environmental
+a708,Tiger puffer nervous necrosis virus (TPNNV),viral,vertical
+a708,Tiger puffer nervous necrosis virus (TPNNV),viral,environmental
+a708,Red grouper nervous necrosis virus (RGNNV),viral,vertical
+a708,Red grouper nervous necrosis virus (RGNNV),viral,environmental
+a708,Barfin flounder nervous necrosis virus (BFNNV),viral,vertical
+a708,Barfin flounder nervous necrosis virus (BFNNV),viral,environmental
+a708,Infectious salmon anemia virus (ISAV),viral,environmental
+a708,Infectious pancreatic necrosis virus (IPNV),viral,vertical
+a708,Infectious pancreatic necrosis virus (IPNV),viral,environmental
+a708,Infectious pancreatic necrosis virus (IPNV),viral,indirect contact
+a708,Salmon alphavirus (SAV),viral,environmental
+a708,White sturgeon iridovirus (WSIV),viral,environmental
+a708,Spring viremia of carp virus (SVCV),viral,environmental
+a708,Cyprinid herpesvirus 3 (CyHV3; koi herpesvirus),viral,environmental
+a715,highly pathogenic avian influenza A(H5N1),viral,direct contact
+a715,highly pathogenic avian influenza A(H5N1),viral,environmental
+a715,highly pathogenic avian influenza A(H5N1),viral,faecal-oral
+a721,Tuberculosis caused by Mycobacterium bovis (bovine tuberculosis),bacterial,direct contact
+a721,Tuberculosis caused by Mycobacterium bovis (bovine tuberculosis),bacterial,aerosol
+a721,Tuberculosis caused by Mycobacterium bovis (bovine tuberculosis),bacterial,environmental
+a721,Tuberculosis caused by Mycobacterium bovis (bovine tuberculosis),bacterial,indirect contact
+a721,Tuberculosis caused by Mycobacterium bovis (bovine tuberculosis),bacterial,vertical
+a721,Tuberculosis caused by Mycobacterium bovis (bovine tuberculosis),bacterial,foodborne
+a726,H14N2 avian influenza A virus,viral,direct contact
+a735,Brucellosis (Brucella spp. infection),bacterial,environmental
+a735,Brucellosis (Brucella spp. infection),bacterial,aerosol
+a735,Brucellosis (Brucella spp. infection),bacterial,foodborne
+a735,Brucellosis (Brucella spp. infection),bacterial,direct contact
+a737,Influenza A,viral,direct contact
+a737,Influenza A,viral,respiratory droplets
+a737,Influenza A,viral,airborne
+a737,Influenza A,viral,faecal-oral
+a737,Influenza A,viral,indirect contact
+a744,"AIDS (human immunodeficiency virus, HIV)",viral,NA
+a744,Nipah virus disease,viral,direct contact
+a744,Nipah virus disease,viral,foodborne
+a744,Severe acute respiratory syndrome (SARS),viral,NA
+a744,A/H5N1 avian influenza,viral,direct contact
+a744,A/H5N1 avian influenza,viral,foodborne
+a744,Transmissible spongiform encephalopathies,prion,NA
+a744,Scrapie,prion,NA
+a744,Bovine spongiform encephalopathy (BSE),prion,foodborne
+a744,Variant Creutzfeldt-Jakob disease (vCJD),prion,foodborne
+a744,Variant Creutzfeldt-Jakob disease (vCJD),prion,bloodborne
+a744,Chronic wasting disease,prion,direct contact
+a744,Chronic wasting disease,prion,environmental
+a744,Ebola haemorrhagic fever,viral,direct contact
+a744,West Nile virus disease,viral,vector-borne
+a744,Monkeypox,viral,NA
+a746,extended-spectrum cephalosporin-resistant (ESC-R) Escherichia coli,bacterial,NA
+a747,Canine parvovirus type-2 (CPV-2),viral,unclear
+a747,Feline parvovirus (FPV),viral,unclear
+a750,"highly pathogenic avian influenza (HPAI), including HPAIV H5N8, H5N6, and H5N1 infections",viral,indirect contact
+a759,Rhipicephalus sanguineus sensu stricto infestation,parasitic,NA
+a759,Amblyomma tigrinum infestation,parasitic,NA
+a759,Ornithodoros sp. infestation,parasitic,NA
+a759,Ctenocephalides canis infestation,parasitic,NA
+a759,Ctenocephalides felis felis infestation,parasitic,NA
+a759,Pulex irritans infestation,parasitic,NA
+a759,Echidnophaga gallinacea infestation,parasitic,NA
+a759,Nonnapsylla rothschildi infestation,parasitic,NA
+a759,Xenopsylla cheopis infestation,parasitic,NA
+a759,Neotyphloceras sp. infestation,parasitic,NA
+a764,Gastrointestinal nematode infection (Strongylida),parasitic,environmental
+a764,Gastrointestinal nematode infection (Strongylida),parasitic,foodborne
+a764,Gastrointestinal nematode infection (Strongylida),parasitic,waterborne
+a777,Highly pathogenic avian influenza (HPAI) H5N1,viral,direct contact
+a779,Fasciola hepatica infection (fasciolosis),parasitic,indirect contact
+a78,brucellosis,bacterial,NA
+a781,"Avian metapneumovirus (aMPV), subtype B",viral,direct contact
+a781,"Avian metapneumovirus (aMPV), subtype B",viral,indirect contact
+a784,Brucellosis (Brucella abortus seropositivity),bacterial,NA
+a785,Staphylococcaceae showing reduced susceptibility to cefoxitin,bacterial,NA
+a785,Staphylococcus aureus showing reduced susceptibility to cefoxitin,bacterial,NA
+a785,Mammaliicoccus spp. showing reduced susceptibility to cefoxitin,bacterial,NA
+a785,Staphylococcus saprophyticus showing reduced susceptibility to cefoxitin,bacterial,NA
+a785,Staphylococcus epidermidis showing reduced susceptibility to cefoxitin,bacterial,NA
+a785,Staphylococcus succinus showing reduced susceptibility to cefoxitin,bacterial,NA
+a786,Peste des petits ruminants (PPR) caused by peste des petits ruminants virus (PPRV),viral,NA
+a79,Anthrax (Bacillus anthracis),bacterial,vector-borne
+a79,Anthrax (Bacillus anthracis),bacterial,indirect contact
+a79,Botulism (Clostridium botulinum),bacterial,foodborne
+a79,Botulism (Clostridium botulinum),bacterial,environmental
+a79,Botulism (Clostridium botulinum),bacterial,faecal-oral
+a79,Brucellosis (Brucella spp.),bacterial,direct contact
+a79,Brucellosis (Brucella spp.),bacterial,foodborne
+a79,Brucellosis (Brucella spp.),bacterial,waterborne
+a79,Brucellosis (Brucella spp.),bacterial,indirect contact
+a79,Hydatidosis (Echinococcus spp.),parasitic,faecal-oral
+a79,Hydatidosis (Echinococcus spp.),parasitic,foodborne
+a79,Rabies (Lyssavirus),viral,NA
+a79,Rift Valley fever (Phlebovirus),viral,vector-borne
+a79,Rift Valley fever (Phlebovirus),viral,aerosol
+a79,Rift Valley fever (Phlebovirus),viral,direct contact
+a79,Toxoplasmosis (Toxoplasma gondii),parasitic,foodborne
+a79,Toxoplasmosis (Toxoplasma gondii),parasitic,vector-borne
+a79,Trichinosis (Trichinella spp.),parasitic,foodborne
+a79,Tuberculosis (Mycobacterium bovis),bacterial,aerosol
+a79,Tuberculosis (Mycobacterium bovis),bacterial,faecal-oral
+a79,Tuberculosis (Mycobacterium bovis),bacterial,waterborne
+a79,Tuberculosis (Mycobacterium bovis),bacterial,indirect contact
+a79,Tuberculosis (Mycobacterium tuberculosis),bacterial,NA
+a799,avian influenza (AIV; including LPAI and HPAI H5N1),viral,faecal-oral
+a799,avian influenza (AIV; including LPAI and HPAI H5N1),viral,aerosol
+a799,avian influenza (AIV; including LPAI and HPAI H5N1),viral,direct contact
+a799,avian influenza (AIV; including LPAI and HPAI H5N1),viral,indirect contact
+a799,avian influenza (AIV; including LPAI and HPAI H5N1),viral,environmental
+a799,Newcastle disease,unclear,NA
+a8,feline coronavirus (FCoV),viral,faecal-oral
+a8,feline coronavirus (FCoV),viral,aerosol
+a8,feline panleukopenia virus (FPLV),viral,NA
+a8,feline herpesvirus (FHV),viral,NA
+a8,feline calicivirus (FCV),viral,NA
+a80,Candidatus Mycoplasma haemominutum (CMhm) infection,bacterial,direct contact
+a80,Candidatus Mycoplasma haemominutum (CMhm) infection,bacterial,vector-borne
+a80,Candidatus Mycoplasma haemominutum (CMhm) infection,bacterial,vertical
+a80,Mycoplasma haemofelis (Mhf) infection,bacterial,direct contact
+a80,Mycoplasma haemofelis (Mhf) infection,bacterial,vector-borne
+a80,Mycoplasma haemofelis (Mhf) infection,bacterial,vertical
+a80,Candidatus Mycoplasma turicensis (CMt) infection,bacterial,NA
+a80,Mycoplasma sp. infection,bacterial,direct contact
+a80,Mycoplasma sp. infection,bacterial,vector-borne
+a80,Mycoplasma sp. infection,bacterial,vertical
+a800,Foot and mouth disease,viral,direct contact
+a800,Foot and mouth disease,viral,foodborne
+a801,Influenza A virus infection,viral,direct contact
+a801,Influenza A virus infection,viral,indirect contact
+a801,Influenza A virus infection,viral,aerosol
+a802,Hepatitis E virus (HEV) infection,viral,foodborne
+a802,Hepatitis E virus (HEV) infection,viral,environmental
+a81,Borrelia burgdorferi sensu stricto,bacterial,vector-borne
+a81,Rickettsia massiliae,bacterial,vector-borne
+a82,leptospirosis,bacterial,environmental
+a82,leptospirosis,bacterial,waterborne
+a823,Highly pathogenic avian influenza H5N1 (HPAI H5N1),viral,direct contact
+a823,Highly pathogenic avian influenza H5N1 (HPAI H5N1),viral,environmental
+a823,Highly pathogenic avian influenza H5N1 (HPAI H5N1),viral,indirect contact
+a826,Strongyle-type nematodes,parasitic,faecal-oral
+a826,Strongyle-type nematodes,parasitic,environmental
+a826,Trichostrongylus spp.,parasitic,faecal-oral
+a826,Trichostrongylus spp.,parasitic,environmental
+a826,Trichuris spp.,parasitic,faecal-oral
+a826,Trichuris spp.,parasitic,environmental
+a826,Paramphistomum spp.,parasitic,waterborne
+a826,Skrjabinema spp.,parasitic,faecal-oral
+a826,Skrjabinema spp.,parasitic,environmental
+a826,Strongyloides spp.,parasitic,faecal-oral
+a826,Strongyloides spp.,parasitic,environmental
+a826,Strongylus spp.,parasitic,faecal-oral
+a826,Strongylus spp.,parasitic,environmental
+a829,Peste des petits ruminants (PPR) / peste des petits ruminants virus (PPRV) infection,viral,unclear
+a83,Nematoda,parasitic,environmental
+a83,Nematoda,parasitic,direct contact
+a83,Nematoda,parasitic,foodborne
+a83,Cestoda,parasitic,NA
+a83,Trematoda,parasitic,NA
+a830,Bovine tuberculosis (bTB),bacterial,direct contact
+a830,Bovine tuberculosis (bTB),bacterial,aerosol
+a830,Bovine tuberculosis (bTB),bacterial,environmental
+a830,Bovine tuberculosis (bTB),bacterial,indirect contact
+a830,Bovine tuberculosis (bTB),bacterial,faecal-oral
+a843,tuberculosis,bacterial,NA
+a848,bovine tuberculosis (bTB),bacterial,aerosol
+a848,bovine tuberculosis (bTB),bacterial,indirect contact
+a848,bovine tuberculosis (bTB),bacterial,environmental
+a853,Theileria infection,parasitic,vector-borne
+a856,Septic peritonitis caused by acanthocephalan parasites,parasitic,NA
+a856,Protozoal encephalitis caused by Sarcocystis neurona,parasitic,NA
+a856,Toxoplasmosis (Toxoplasma gondii infection),parasitic,environmental
+a856,Bovine tuberculosis (BTB),bacterial,waterborne
+a856,Bovine tuberculosis (BTB),bacterial,direct contact
+a856,Brucellosis,bacterial,waterborne
+a856,Brucellosis,bacterial,direct contact
+a856,Rabies,viral,NA
+a856,Distemper,viral,NA
+a856,Salmonella spp.,bacterial,waterborne
+a856,Shigella spp.,bacterial,waterborne
+a856,Vibrio spp.,bacterial,waterborne
+a856,Camplybacter spp.,bacterial,waterborne
+a856,Cryptosporidium spp.,parasitic,waterborne
+a856,Giardia spp.,parasitic,waterborne
+a857,Monkeypox,viral,direct contact
+a857,Severe acute respiratory syndrome (SARS),viral,direct contact
+a857,Ebola hemorrhagic fever,viral,direct contact
+a857,Transmissible spongiform encephalopathies,prion,foodborne
+a857,Avian influenza,viral,direct contact
+a857,Avian influenza,viral,indirect contact
+a857,Lyme disease,bacterial,vector-borne
+a857,West Nile virus,viral,vector-borne
+a857,Dengue fever,viral,vector-borne
+a857,Leptospirosis,bacterial,waterborne
+a857,Leptospirosis,bacterial,indirect contact
+a857,Hantavirus infection,viral,indirect contact
+a863,Highly pathogenic avian influenza H5N1 (HPAI H5N1),viral,direct contact
+a863,Highly pathogenic avian influenza H5N1 (HPAI H5N1),viral,environmental
+a863,Highly pathogenic avian influenza H5N1 (HPAI H5N1),viral,indirect contact
+a866,Rinderpest,viral,unclear
+a866,Bovine tuberculosis (BTB),bacterial,direct contact
+a866,Anthrax,bacterial,environmental
+a866,Anthrax,bacterial,foodborne
+a866,Foot and mouth disease (FMD),viral,unclear
+a866,Trypanosomosis,parasitic,vector-borne
+a870,avian influenza,viral,NA
+a870,foot-and-mouth disease virus (FMDV),viral,NA
+a873,Salmonella infection,bacterial,NA
+a874,Rabbit hemorrhagic disease / rabbit hemorrhagic disease virus 2 (RHDV2),viral,direct contact
+a874,Rabbit hemorrhagic disease / rabbit hemorrhagic disease virus 2 (RHDV2),viral,indirect contact
+a874,Rabbit hemorrhagic disease / rabbit hemorrhagic disease virus 2 (RHDV2),viral,vector-borne
+a874,Rabbit hemorrhagic disease / rabbit hemorrhagic disease virus 2 (RHDV2),viral,environmental
+a875,bovine tuberculosis (bTB) caused by Mycobacterium bovis,bacterial,aerosol
+a875,bovine tuberculosis (bTB) caused by Mycobacterium bovis,bacterial,ingestion
+a875,bovine tuberculosis (bTB) caused by Mycobacterium bovis,bacterial,percutaneous
+a875,bovine tuberculosis (bTB) caused by Mycobacterium bovis,bacterial,direct contact
+a875,bovine tuberculosis (bTB) caused by Mycobacterium bovis,bacterial,indirect contact
+a875,bovine tuberculosis (bTB) caused by Mycobacterium bovis,bacterial,environmental
+a877,Avian influenza,unclear,NA
+a877,Rabies,unclear,NA
+a877,Salmonellosis (Salmonella enterica excluding Salmonella abortusovis),unclear,NA
+a877,Bovine tuberculosis,unclear,NA
+a877,Trichinellosis,unclear,NA
+a877,Newcastle disease,unclear,NA
+a877,Brucellosis,unclear,NA
+a877,Leptospirosis,unclear,NA
+a877,Echinococcosis,unclear,NA
+a877,Toxoplasmosis,unclear,NA
+a877,Avian chlamydiosis,unclear,NA
+a877,Poxvirus infections,viral,NA
+a877,Malignant catarrhal fever,unclear,NA
+a877,Foot and mouth disease,unclear,NA
+a877,Theileriosis,unclear,NA
+a877,Filovirus infections,viral,NA
+a877,White-nose syndrome,unclear,NA
+a877,Elephant herpes virus,viral,NA
+a877,Feline leukemia,unclear,NA
+a877,Immunodeficiency virus infections,viral,NA
+a877,Bovine genital/venereal campylobacteriosis,unclear,NA
+a879,Zoonoses at the livestock-wildlife interface,unclear,direct contact
+a879,Zoonoses at the livestock-wildlife interface,unclear,indirect contact
+a879,Zoonoses at the livestock-wildlife interface,unclear,environmental
+a879,Zoonoses at the livestock-wildlife interface,unclear,foodborne
+a882,Trypanosomiasis,parasitic,vector-borne
+a882,Trypanosomiasis,parasitic,foodborne
+a882,Trypanosomiasis,parasitic,faecal-oral
+a887,avian influenza,viral,environmental
+a887,bovine tuberculosis,bacterial,NA
+a888,leptospirosis,bacterial,NA
+a888,brucellosis,bacterial,NA
+a888,bovine tuberculosis,bacterial,direct contact
+a888,bovine tuberculosis,bacterial,foodborne
+a888,Hendra virus disease,viral,environmental
+a888,Hendra virus disease,viral,foodborne
+a888,Hendra virus disease,viral,direct contact
+a888,Nipah virus disease,viral,NA
+a888,avian influenza,viral,NA
+a888,African swine fever,viral,NA
+a888,myxomatosis,viral,NA
+a888,rabbit hemorrhagic disease,viral,NA
+a888,southern cattle tick infestation,parasitic,NA
+a89,canine distemper virus (CDV),viral,unclear
+a89,canine parvovirus (CPV),viral,unclear
+a890,H8N4 avian influenza,viral,direct contact
+a891,Canine adenovirus type 1 infection (infectious canine hepatitis; ICH; Rubarth disease),viral,direct contact
+a891,Canine adenovirus type 1 infection (infectious canine hepatitis; ICH; Rubarth disease),viral,environmental
+a891,Canine adenovirus type 1 infection (infectious canine hepatitis; ICH; Rubarth disease),viral,indirect contact
+a891,Canine adenovirus type 2 infection (infectious tracheobronchitis; kennel cough),viral,environmental
+a891,Canine adenovirus type 2 infection (infectious tracheobronchitis; kennel cough),viral,indirect contact
+a892,canine distemper virus (CDV) infection,viral,unclear
+a893,avian influenza viruses (AIV),viral,unclear
+a893,"avulaviruses, including Newcastle disease virus (NDV)",viral,unclear
+a893,coronaviruses,viral,unclear
+a893,Chlamydia sp.,bacterial,unclear
+a894,avian influenza,viral,NA
+a894,chytridiomycosis,fungal,direct contact
+a894,fish mycobacteriosis,bacterial,NA
+a895,Dioctophymosis (Dioctophyme renale infection),parasitic,foodborne
+a895,Dioctophymosis (Dioctophyme renale infection),parasitic,waterborne
+a898,highly pathogenic avian influenza H5N8,viral,NA
+a899,African swine fever (ASF),viral,indirect contact
+a9,African swine fever,viral,direct contact
+a9,African swine fever,viral,indirect contact
+a9,African swine fever,viral,environmental
+a9,African swine fever,viral,waterborne
+a901,Rabies,viral,direct contact
+a902,Brucellosis (Brucella spp.),bacterial,NA
+a902,Enterotoxemia (Clostridium perfringens),bacterial,NA
+a902,Hemorrhagic septicemia (Pasteurella multocida),bacterial,NA
+a902,Tuberculosis (Mycobacterium bovis),bacterial,NA
+a902,Contagious caprine pleuropneumonia (Mycoplasma capricolum subsp. capripneumoniae),bacterial,NA
+a902,Q fever (Coxiella burnetii),bacterial,NA
+a902,Chlamydiosis (Chlamydia psittaci and Chlamydia abortus),bacterial,NA
+a902,Peste des petits ruminants,viral,NA
+a902,Foot and mouth disease,viral,NA
+a902,Toxoplasmosis (Toxoplasma gondii),parasitic,NA
+a902,Theileriosis (Theileria annulata and Theileria orientalis),parasitic,vector-borne
+a903,Canine parvovirus type 2 (CPV-2),viral,direct contact
+a903,Canine parvovirus type 2 (CPV-2),viral,indirect contact
+a903,Feline panleukopenia virus (FPV),viral,NA
+a903,Canine adenovirus type 1 (CAdV-1),viral,NA
+a903,Canine adenovirus type 2 (CAdV-2),viral,NA
+a903,Canine circovirus (CaCV),viral,environmental
+a903,Canine kobuvirus (CaKoV),viral,environmental
+a903,Canine kobuvirus (CaKoV),viral,indirect contact
+a906,Highly pathogenic avian influenza A (H5N1),viral,direct contact
+a906,Highly pathogenic avian influenza A (H5N1),viral,environmental
+a907,Neosporosis (Neospora caninum infection),parasitic,vertical
+a907,Neosporosis (Neospora caninum infection),parasitic,faecal-oral
+a907,Neosporosis (Neospora caninum infection),parasitic,foodborne
+a907,Neosporosis (Neospora caninum infection),parasitic,waterborne
+a907,Neosporosis (Neospora caninum infection),parasitic,environmental
+a909,novel chamois respirovirus (CHRV3) infection,viral,direct contact
+a909,novel chamois respirovirus (CHRV3) infection,viral,indirect contact
+a909,bovine respirovirus 3 (BRV3) infection,viral,direct contact
+a909,bovine respirovirus 3 (BRV3) infection,viral,indirect contact
+a91,Parasitic nematode infections,parasitic,environmental
+a910,canine distemper virus infection,viral,respiratory
+a910,canine distemper virus infection,viral,direct contact
+a910,canine distemper virus infection,viral,indirect contact
+a910,yellow fever,viral,NA
+a910,Bordetella spp. infection,bacterial,NA
+a910,Haemophilus spp. infection,bacterial,NA
+a910,Streptococcus spp. infection,bacterial,NA
+a910,Escherichia coli infection,bacterial,NA
+a910,Staphylococcus spp. infection,bacterial,NA
+a914,Theileria spp.,parasitic,vector-borne
+a914,Theileria parva,parasitic,vector-borne
+a914,Theileria velifera,parasitic,vector-borne
+a914,Theileria mutans,parasitic,vector-borne
+a914,Theileria equi,parasitic,vector-borne
+a914,Theileria ovis,parasitic,vector-borne
+a914,Anaplasma spp.,bacterial,vector-borne
+a914,Anaplasma marginale,bacterial,vector-borne
+a914,Anaplasma platys,bacterial,vector-borne
+a914,Anaplasma platys-like,bacterial,vector-borne
+a914,Anaplasma bovis,bacterial,vector-borne
+a914,Anaplasma sp. Lambwe-1,bacterial,vector-borne
+a914,Babesia spp.,parasitic,vector-borne
+a914,Babesia bigemina,parasitic,vector-borne
+a914,Babesia bovis,parasitic,vector-borne
+a914,Babesia canis-like,parasitic,vector-borne
+a914,Babesia microti-like,parasitic,vector-borne
+a914,Trypanosoma spp.,parasitic,vector-borne
+a914,Trypanosoma brucei,parasitic,vector-borne
+a914,Trypanosoma congolense,parasitic,vector-borne
+a914,Trypanosoma brucei rhodesiense,parasitic,vector-borne
+a914,Coxiella burnetii (Q fever),bacterial,vector-borne
+a914,Spotted Fever Group Rickettsia spp.,bacterial,vector-borne
+a914,Rickettsia sibirica,bacterial,vector-borne
+a914,Rickettsia sibirica mongolotimonae,bacterial,vector-borne
+a914,Brucella spp.,bacterial,unclear
+a914,Chlamydia abortus,bacterial,unclear
+a914,Chlamydophila abortus,bacterial,unclear
+a914,Bartonella spp.,bacterial,unclear
+a914,Leptospira spp.,bacterial,unclear
+a914,Toxoplasma gondii,parasitic,unclear
+a914,Neospora caninum,parasitic,unclear
+a914,Rift Valley fever virus,viral,vector-borne
+a914,African swine fever virus,viral,vector-borne
+a914,Retroviridae,viral,unclear
+a914,Caulimoviridae,viral,unclear
+a914,Rhabdoviridae,viral,unclear
+a914,Herelleviridae,viral,unclear
+a914,Mimiviridae,viral,unclear
+a914,Siphoviridae,viral,unclear
+a914,Totiviridae,viral,unclear
+a914,Iridoviridae,viral,unclear
+a914,Orthomyxoviridae,viral,unclear
+a914,Chuviridae,viral,unclear
+a914,Phenuiviridae,viral,unclear
+a914,Parvoviridae,viral,unclear
+a914,Podoviridae,viral,unclear
+a914,Myoviridae,viral,unclear
+a914,Flaviviridae,viral,vector-borne
+a914,Unclassified +ssRNA viruses,viral,unclear
+a915,Highly pathogenic avian influenza A(H5N1) virus,viral,NA
+a915,Influenza A(H1N1),viral,NA
+a915,SARS-CoV-2 infection,viral,NA
+a916,Canine distemper (CD) / canine distemper virus (CDV; Morbillivirus canis),viral,aerosol
+a917,foot-and-mouth disease (FMD) / foot-and-mouth disease virus (FMDV),viral,direct contact
+a917,foot-and-mouth disease (FMD) / foot-and-mouth disease virus (FMDV),viral,environmental
+a92,Tuberculosis,bacterial,aerosol
+a92,Tuberculosis,bacterial,direct contact
+a92,Tuberculosis,bacterial,environmental
+a92,Tuberculosis,bacterial,indirect contact
+a92,Tuberculosis,bacterial,foodborne
+a92,Mycobacterium tuberculosis infection,bacterial,aerosol
+a92,Mycobacterium tuberculosis infection,bacterial,direct contact
+a92,Mycobacterium tuberculosis infection,bacterial,environmental
+a92,Mycobacterium tuberculosis infection,bacterial,indirect contact
+a92,Mycobacterium bovis infection (bovine tuberculosis),bacterial,aerosol
+a92,Mycobacterium bovis infection (bovine tuberculosis),bacterial,environmental
+a92,Mycobacterium bovis infection (bovine tuberculosis),bacterial,indirect contact
+a92,Mycobacterium bovis infection (bovine tuberculosis),bacterial,foodborne
+a92,Mycobacterium mungi infection,bacterial,environmental
+a92,Mycobacterium mungi infection,bacterial,indirect contact
+a92,Mycobacterium pinnipedii infection,bacterial,aerosol
+a92,Mycobacterium pinnipedii infection,bacterial,direct contact
+a92,Non-tuberculous mycobacterial infection,bacterial,NA
+a931,Leishmania infantum infection / leishmaniosis,parasitic,vector-borne
+a945,Influenza A virus,viral,NA
+a945,Canine coronavirus,viral,NA
+a945,Getah virus,viral,NA
+a945,Rotavirus A,viral,NA
+a945,Hepatitis E virus type 3,viral,NA
+a945,Mammalian orthoreovirus 3,viral,NA
+a945,Parainfluenza virus 5,viral,NA
+a945,Enterococcus faecium,bacterial,NA
+a945,Enterococcus faecalis,bacterial,NA
+a945,Clostridium perfringens,bacterial,NA
+a945,Klebsiella pneumoniae,bacterial,NA
+a945,Campylobacter coli,bacterial,NA
+a945,Staphylococcus aureus,bacterial,NA
+a945,Cryptosporidium parvum,parasitic,NA
+a947,zoonotic influenza viruses,viral,direct contact
+a947,zoonotic influenza viruses,viral,indirect contact
+a947,zoonotic influenza viruses,viral,environmental
+a947,zoonotic influenza viruses,viral,aerosol
+a95,African swine fever (ASF),viral,direct contact
+a95,African swine fever (ASF),viral,indirect contact
+a95,African swine fever (ASF),viral,environmental
+a950,canine distemper (CD) caused by canine distemper virus (CDV; Morbillivirus canis),viral,aerosol
+a950,canine distemper (CD) caused by canine distemper virus (CDV; Morbillivirus canis),viral,direct contact
+a953,brucellosis (Brucella spp.),bacterial,direct contact
+a953,brucellosis (Brucella spp.),bacterial,venereal
+a953,Brucella suis infection,bacterial,direct contact
+a953,Brucella suis infection,bacterial,venereal
+a953,Brucella abortus infection,bacterial,NA
+a953,Brucella melitensis infection,bacterial,NA
+a956,Porcine circovirus type 3 (PCV3) infection,viral,vector-borne
+a959,Highly pathogenic avian influenza H5N1 (HPAI H5N1),viral,direct contact
+a959,Highly pathogenic avian influenza H5N1 (HPAI H5N1),viral,environmental
+a959,Highly pathogenic avian influenza H5N1 (HPAI H5N1),viral,indirect contact
+a964,Hepatozoon canis infection,parasitic,vector-borne
+a97,avian influenza,viral,environmental
+a97,H5 avian influenza,viral,environmental
+a97,H7 avian influenza,viral,environmental
+a970,Chronic wasting disease,prion,direct contact
+a970,Chronic wasting disease,prion,indirect contact
+a970,Chronic wasting disease,prion,environmental
+a970,Bluetongue,viral,vector-borne
+a970,Epizootic hemorrhagic disease,viral,vector-borne
+a970,SARS-CoV-2 infection,viral,direct contact
+a970,Animal tuberculosis,bacterial,NA
+a970,Brucellosis,bacterial,direct contact
+a970,Brucellosis,bacterial,foodborne
+a970,Paratuberculosis or Johne's disease,bacterial,faecal-oral
+a970,Paratuberculosis or Johne's disease,bacterial,environmental
+a970,Lyme disease,bacterial,vector-borne
+a970,Lyme disease,bacterial,indirect contact
+a970,Anaplasmosis,bacterial,vector-borne
+a970,Sarcoptic mange,parasitic,direct contact
+a970,Sarcoptic mange,parasitic,indirect contact
+a973,"Brucellosis (Brucella species, including Brucella abortus)",bacterial,NA
+a973,Rinderpest,viral,NA
+a973,Foot and Mouth Disease (Aphtovirus),viral,NA
+a973,Severe acute respiratory syndromes caused by Coronavirus,viral,NA
+a973,Peste de petits ruminants,viral,NA
+a973,Bovine tuberculosis (Mycobacterium bovis),bacterial,NA
+a973,Salmonella,bacterial,NA
+a973,Leptospira,bacterial,NA
+a973,Echinococcus,parasitic,NA
+a973,Toxoplasma,parasitic,NA
+a973,Epizootic Hemorrhagic Disease Virus,viral,NA
+a973,Coronavirus,viral,NA
+a974,Echinococcus felidis,parasitic,faecal-oral
+a974,Echinococcus felidis,parasitic,environmental
+a976,bovine tuberculosis (bTB),bacterial,aerosol
+a976,bovine tuberculosis (bTB),bacterial,direct contact
+a976,bovine tuberculosis (bTB),bacterial,foodborne
+a976,bovine tuberculosis (bTB),bacterial,waterborne
+a976,bovine tuberculosis (bTB),bacterial,vertical
+a98,peste des petits ruminants (PPR) / peste des petits ruminants virus (PPRV),viral,NA
+a990,Mycoplasma bovis infection (pulmonary mycoplasmosis),bacterial,NA
+a990,SARS-CoV-2,viral,NA
+a990,Bovine herpesvirus-1,viral,NA
+a990,Bovine viral diarrhea virus,viral,NA
+a990,Parainfluenza-3 virus,viral,NA
+a990,Bovine respiratory syncytial virus,viral,NA
+a990,Mycobacterial infection (Mycobacterium spp.),bacterial,NA
+a990,Chronic wasting disease,prion,NA
+a995,Peste des petits ruminants (PPR) / peste des petits ruminants virus (PPRV) infection,viral,livestock-to-wildlife spillover
+a995,Peste des petits ruminants (PPR) / peste des petits ruminants virus (PPRV) infection,viral,transmission between wild animals
+a995,Peste des petits ruminants (PPR) / peste des petits ruminants virus (PPRV) infection,viral,wildlife-to-livestock spillback
+a995,Rinderpest / rinderpest virus (RPV) infection,viral,livestock-to-wildlife spillover
+a995,Rinderpest / rinderpest virus (RPV) infection,viral,transmission among wildlife

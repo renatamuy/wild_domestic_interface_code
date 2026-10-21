@@ -1,0 +1,3 @@
+paper_id,processing_time_min,prompt_tokens,output_tokens,total_tokens,estimated_api_cost_usd,interface_boolean_completion,hosts_role_completion,any_parse_error,any_boolean_evidence_inconsistency,any_quote_not_found,interface_needs_review,pdf_text_status
+a122,0.41,29989,1747,31736,0.080942,1,1,FALSE,FALSE,TRUE,FALSE,OK
+a52,0.35,41046,1988,43034,0.105948,1,1,FALSE,FALSE,TRUE,FALSE,OK

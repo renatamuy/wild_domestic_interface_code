@@ -11,7 +11,7 @@
 
 
 
-<title>README_wild_domestic_interface_synthesis_pipeline_v5_5</title>
+<title>README</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -352,926 +352,205 @@ display: none;
 </div>
 
 
-<div id="wilddomestic-interface-synthesis-pipeline-v5.5" class="section level1">
-<h1>Wild–Domestic Interface Synthesis Pipeline v5.5</h1>
-<div id="pipeline-manual" class="section level2">
-<h2>Pipeline Manual</h2>
-<p><strong>Frozen scientific version:</strong> v5.5<br />
-<strong>Primary production pipeline:</strong> OpenAI API
-(<code>gpt-5.6-terra</code>, reasoning effort = <code>low</code>)<br />
-<strong>Fallback pipeline:</strong> local Ollama version with the same
-scientific extraction/scoring framework<br />
-<strong>Corpus target:</strong> 270 PDFs<br />
-<strong>Primary connector:</strong> <code>paper_id</code></p>
-<hr />
-</div>
-<div id="what-this-pipeline-is-trying-to-answer" class="section level2">
-<h2>1. What this pipeline is trying to answer</h2>
-<p>The pipeline was deliberately reduced to the information needed for
-the synthesis rather than attempting to extract everything that could
-conceivably be said about each paper.</p>
-<p>It has four main jobs:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Position every paper in the main synthesis figure</strong>
-using two conceptually separate axes:
-<ul>
-<li><strong>Host-domain Orientation (X):</strong> which host domain is
-substantively centred in the study?</li>
-<li><strong>Interface Centrality / Operationalisation (Y):</strong> how
-far does the paper move from mentioning the wild–domestic interface to
-actually representing, measuring, and analytically using it?</li>
-</ul></li>
-<li><strong>Create manuscript-level descriptive summaries</strong> of
-study type/design, countries, host taxa/species, diseases/pathogens,
-agent types, and transmission modes.</li>
-<li><strong>Extract interface-specific quantitative measures and
-conceptual evidence</strong> for downstream summary and conceptual
-tables.</li>
-<li><strong>Retain evidence and Qality Assurance information for human
-auditing.</strong></li>
-</ol>
-<p>A key principle is that <strong>the LLM extracts structured evidence,
-while R deterministically calculates the two synthesis scores</strong>.
-The LLM does not directly choose the final X or Y coordinate.</p>
-<hr />
-</div>
-<div id="overall-workflow" class="section level2">
-<h2>2. Overall workflow</h2>
-<pre class="text"><code>PDF filename
-   |
-   +--&gt; paper_id (e.g., 34.pdf -&gt; a34)
-   |
-   +--&gt; master_table.xlsx / Records
-   |       +--&gt; authoritative Author
-   |       +--&gt; authoritative Title
-   |       +--&gt; Journal
-   |       +--&gt; DOI
-   |
-   +--&gt; PDF text extraction + readability diagnostics
-   |
-   +--&gt; three LLM modules
-           |
-           +--&gt; descriptive metadata
-           +--&gt; interface evidence
-           +--&gt; host-domain roles
-                    |
-                    +--&gt; deterministic R scoring
-                    |       +--&gt; Host-domain Orientation
-                    |       +--&gt; Interface Centrality
-                    |
-                    +--&gt; evidence / quotations / quantitative measures
-                    +--&gt; audit and QA outputs
-                    +--&gt; Fig. 5-ready data</code></pre>
-<p>Each module is a separate model call. Papers are therefore not part
-of one accumulating conversation: paper 50 does not inherit the
-preceding 49 papers or make the model “tired”.</p>
-<hr />
-</div>
-<div id="bibliographic-metadata-one-authoritative-source" class="section level2">
-<h2>3. Bibliographic metadata: one authoritative source</h2>
-<div id="decision" class="section level3">
-<h3>Decision</h3>
-<p><strong>Author, Title, Journal and DOI are not inferred from the PDF
-or extracted by the LLM.</strong></p>
-<p>The pipeline derives <code>paper_id</code> from the PDF filename and
-joins it to the <code>Records</code> sheet of
-<code>master_table.xlsx</code>.</p>
-<p>Example:</p>
-<pre class="text"><code>34.pdf -&gt; a34 -&gt; master_table.xlsx -&gt; correct bibliographic metadata</code></pre>
-</div>
-<div id="why" class="section level3">
-<h3>Why</h3>
-<p>PDF metadata are often dirty, incomplete, or describe a parent book
-rather than the retrieved chapter. DOI regex extraction can also
-introduce unnecessary errors. The master table already contains curated
-bibliographic information, so it is the source of truth.</p>
-</div>
-<div id="safeguards" class="section level3">
-<h3>Safeguards</h3>
-<p>Before model processing, the script checks that:</p>
-<ul>
-<li><code>paper_id</code> exists in the master table;</li>
-<li><code>paper_id</code> is unique;</li>
-<li>every selected PDF has a unique master-table match.</li>
-</ul>
-<p>A missing or duplicate match stops the relevant workflow rather than
-silently guessing.</p>
-<hr />
-</div>
-</div>
-<div id="what-the-llm-extracts" class="section level2">
-<h2>4. What the LLM extracts</h2>
-<div id="module-a-descriptive-metadata" class="section level3">
-<h3>Module A — descriptive metadata</h3>
-<p>This module extracts only manuscript-relevant descriptive information
-for a publication:</p>
-<ul>
-<li>study type;</li>
-<li>study design;</li>
-<li>countries investigated;</li>
-<li>wildlife taxa;</li>
-<li>domestic taxa;</li>
-<li>wildlife species;</li>
-<li>domestic species;</li>
-<li>diseases/pathogens evaluated by the paper;</li>
-<li>disease agent type;</li>
-<li>supported transmission modes.</li>
-</ul>
-<p>The prompt explicitly tells the model to distinguish <strong>what the
-focal paper itself did</strong> from what cited studies did.</p>
-</div>
-<div id="module-b-interface-evidence" class="section level3">
-<h3>Module B — interface evidence</h3>
-<p>This is the evidence base for the Y-axis and for
-conceptual/quantitative outputs.</p>
-<p>The model answers eight Boolean criteria:</p>
-<ol style="list-style-type: decimal">
-<li><code>interface_mentioned</code></li>
-<li><code>interface_in_objectives</code></li>
-<li><code>conceptual_framing</code></li>
-<li><code>qualitative_representation</code></li>
-<li><code>quantitative_variable_present</code></li>
-<li><code>variable_used_in_analysis</code></li>
-<li><code>interface_specific_question_addressed</code></li>
-<li><code>interface_explicit</code></li>
-</ol>
-<p>For every criterion, the output structure contains its <strong>own
-evidence quotation, page, and section</strong>.</p>
-<p>The module also extracts:</p>
-<ul>
-<li>interface variable names (that are manually aggregated on code
-downstream);</li>
-<li>terminology used by the authors;</li>
-<li>whether the interface statement is explicit or implicit;</li>
-<li>a representative verbatim interface statement or passage and its
-location;</li>
-<li>interface-specific quantitative measures and their analytical
-roles/results.</li>
-</ul>
-</div>
-<div id="module-c-host-domain-roles" class="section level3">
-<h3>Module C — host-domain roles</h3>
-<p>The model classifies, non-exclusively:</p>
-<pre class="text"><code>wildlife_role
-domestic_role</code></pre>
-<p>Each must be one of the following:</p>
-<ul>
-<li><code>ABSENT</code></li>
-<li><code>CONTEXTUAL</code></li>
-<li><code>SECONDARY</code></li>
-<li><code>PRIMARY</code></li>
-<li><code>UNCLEAR</code></li>
-</ul>
-<p>For reviews, modelling studies, and conceptual papers,
-<code>PRIMARY</code> does <strong>not</strong> require physical
-sampling. It means a central substantive focus of the study, synthesis,
-analysis, or interpretation.</p>
-<hr />
-</div>
-</div>
-<div id="host-domain-orientation-the-x-axis" class="section level2">
-<h2>5. Host-domain Orientation: the X-axis</h2>
-<div id="scientific-question" class="section level3">
-<h3>Scientific question</h3>
+<div id="wildlifedomestic-animal-interfaces-evidence-synthesis-and-reproducible-analyses" class="section level1">
+<h1>Wildlife–Domestic Animal Interfaces: Evidence Synthesis and
+Reproducible Analyses</h1>
 <blockquote>
-<p>Relative to the other host domain, how central are wildlife and
-domestic animals to what this paper actually studies, analyses, or
-synthesises?</p>
+<p><strong>Repository documentation for code users and peer
+reviewers.</strong> This README explains the deposited research files
+and how to interpret or reuse them. The extended <a href="docs/pipeline_methods.md">pipeline methods</a> document records
+technical decisions made during code development. <strong>Neither
+document is intended as additional evidence essential to understanding
+the paper, nor does it replace the manuscript’s Methods, figures or
+supplementary data.</strong> The manuscript remains the authoritative
+scientific account.</p>
 </blockquote>
-<p>The model supplies the two host roles. <strong>R applies the scoring
-rules.</strong></p>
+<div id="purpose" class="section level2">
+<h2>Purpose</h2>
+<p>This repository documents an LLM-assisted evidence synthesis of
+publications addressing wildlife–domestic animal interfaces. It is
+intended to make the extraction logic, data harmonisation, validation
+workflow and downstream analysis code inspectable by reviewers and other
+researchers.</p>
+<p><strong>Two distinct reproducibility routes should not be
+confused:</strong></p>
+<ul>
+<li><strong>Downstream analysis:</strong> The intended route for
+reproducing manuscript tables and figures uses the frozen, consolidated
+datasets and R scripts. It should not require access to article PDFs or
+an LLM API.</li>
+<li><strong>Upstream extraction:</strong> The v5.5 pipeline documents
+how structured evidence was extracted from publications. Re-execution
+requires legally obtained source PDFs, a compatible model/API
+environment and appropriate credentials. Model-dependent outputs may
+differ between runs.</li>
+</ul>
+<p>The technical account of the extraction modules, scoring definitions,
+evidence checks and limitations is in <strong><a href="docs/pipeline_methods.md">Pipeline Methods — v5.5</a></strong>.
+This linked document is provided for <em>repository transparency and
+reuse</em>, not because a reader must study it to follow the
+manuscript’s main results.</p>
+</div>
+<div id="repository-map" class="section level2">
+<h2>Repository map</h2>
+<p>The following paths reflect the <strong>private staging
+archive</strong>. File names and folders may be consolidated before
+final deposition.</p>
 <table>
 <colgroup>
-<col width="40%" />
-<col width="30%" />
-<col width="30%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="right">Index</th>
-<th>Interpretation</th>
-<th>Operational logic</th>
+<th>Location</th>
+<th>Role</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="right"><strong>-1.00</strong></td>
-<td>Exclusively wildlife-focused</td>
-<td>Wildlife substantive; domestic absent</td>
+<td><code>script/05_pipeline_synthesis_lean_v5_5_OPENAI_WEEKEND_SAFE_FROZEN.R</code></td>
+<td>Original production extraction implementation; <strong>not
+required</strong> for downstream reproduction</td>
 </tr>
 <tr class="even">
-<td align="right"><strong>-0.75</strong></td>
-<td>Predominantly wildlife-focused</td>
-<td>Wildlife substantive; domestic contextual only</td>
+<td><code>script/06_pipeline_synthesis_lean_v5_5_OPENAI_RERUN_a52_a122.R</code></td>
+<td>Targeted extraction quality-control rerun; retained for
+provenance</td>
 </tr>
 <tr class="odd">
-<td align="right"><strong>-0.50</strong></td>
-<td>Wildlife-centred interface</td>
-<td>Wildlife primary; domestic secondary</td>
+<td><code>script/07_MERGE_targeted_QC_rerun_a52_a122.R</code></td>
+<td>Targeted rerun merge/consolidation step; retained for
+provenance</td>
 </tr>
 <tr class="even">
-<td align="right"><strong>0.00</strong></td>
-<td>Balanced host focus</td>
-<td>Both primary, or both substantive at a comparable secondary
-level</td>
+<td><code>script/09_summary_tables.R</code></td>
+<td>Manuscript summary-table analysis script; inputs and execution still
+to be verified</td>
 </tr>
 <tr class="odd">
-<td align="right"><strong>+0.50</strong></td>
-<td>Domestic-centred interface</td>
-<td>Domestic primary; wildlife secondary</td>
+<td><code>script/12_Figure_04_Interface_Figure_AB.R</code></td>
+<td>Wildlife–domestic host-group and disease-system Figure 4 code</td>
 </tr>
 <tr class="even">
-<td align="right"><strong>+0.75</strong></td>
-<td>Predominantly domestic-focused</td>
-<td>Domestic substantive; wildlife contextual only</td>
+<td><code>results_synthesis_consolidated/</code></td>
+<td>Frozen/derived datasets, QA files and analysis outputs;
+public-shareable subset still to be determined</td>
 </tr>
 <tr class="odd">
-<td align="right"><strong>+1.00</strong></td>
-<td>Exclusively domestic-focused</td>
-<td>Domestic substantive; wildlife absent</td>
+<td><code>dictionary/</code></td>
+<td>Curated host and disease dictionaries</td>
+</tr>
+<tr class="even">
+<td><code>master/</code></td>
+<td>Bibliographic metadata and study-level reference materials; review
+before public release</td>
+</tr>
+<tr class="odd">
+<td><code>docs/pipeline_methods.md</code></td>
+<td>Detailed scientific and technical explanation of the upstream
+extraction framework</td>
 </tr>
 </tbody>
 </table>
-<p>If either role is missing/unclear, or a combination does not satisfy
-a defined rule, the score is <code>NA</code>.</p>
+<p>Other scripts and files in the staging archive are not necessarily
+part of the minimal reviewer execution path.</p>
 </div>
-<div id="important-distinction" class="section level3">
-<h3>Important distinction</h3>
-<p><code>CONTEXTUAL</code> is not the same as
-<code>SECONDARY</code>.</p>
-<ul>
-<li><strong>Contextual:</strong> the other host domain is mainly
-background, a potential source/recipient, or contextual factor.</li>
-<li><strong>Secondary:</strong> it genuinely contributes to the
-study/synthesis/analysis, but is subordinate to the primary host
-domain.</li>
-</ul>
-<p>This distinction is what separates ±0.75 from ±0.50.</p>
-</div>
-<div id="balanced-does-not-mean-uncertain" class="section level3">
-<h3>Balanced does not mean uncertain</h3>
-<p><code>0</code> is a substantive scientific classification.
-Uncertainty is retained as <code>NA</code>; it is never converted to the
-centre of the figure.</p>
-<hr />
-</div>
-</div>
-<div id="interface-centrality-operationalisation-the-y-axis" class="section level2">
-<h2>6. Interface Centrality / Operationalisation: the Y-axis</h2>
-<div id="scientific-question-1" class="section level3">
-<h3>Scientific question</h3>
-<blockquote>
-<p>How far does the paper move from merely invoking the wild–domestic
-relationship to representing it empirically and using it
-analytically?</p>
-</blockquote>
-<table>
-<colgroup>
-<col width="40%" />
-<col width="30%" />
-<col width="30%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="right">Score</th>
-<th>Interpretation</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="right"><strong>-1.00</strong></td>
-<td>Introductory mention</td>
-<td>Interface/relationship is mentioned but not substantively
-represented later on. Values here expected to be zero due to human
-screening levels.</td>
-</tr>
-<tr class="even">
-<td align="right"><strong>-0.50</strong></td>
-<td>Conceptual framing</td>
-<td>Interface structures objectives, rationale, or interpretation but is
-not translated into an observable/quantified representation</td>
-</tr>
-<tr class="odd">
-<td align="right"><strong>0.00</strong></td>
-<td>Qualitative representation</td>
-<td>Observable interface settings, contacts, shared resources,
-behaviours, or relationships are represented qualitatively</td>
-</tr>
-<tr class="even">
-<td align="right"><strong>+0.50</strong></td>
-<td>Quantitative representation</td>
-<td>A measurable interface exposure/category/variable is quantified</td>
-</tr>
-<tr class="odd">
-<td align="right"><strong>+1.00</strong></td>
-<td>Interface operationalised</td>
-<td>An interface exposure/category/variable is used in a comparison,
-model, association test, effect estimate, transmission analysis, or
-other quantitative analysis</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="critical-decision-operationalisation-can-be-implicit" class="section level3">
-<h3>Critical decision: operationalisation can be implicit</h3>
-<p>The authors do <strong>not</strong> need to use the word “interface”
-for scoring.</p>
-<p>Examples that can operationalise the interface features include:</p>
-<ul>
-<li>shared versus non-shared sites;</li>
-<li>mixed-host versus single-host settings;</li>
-<li>wildlife presence/absence on livestock properties;</li>
-<li>spatial overlap or proximity;</li>
-<li>contact rates;</li>
-<li>shared water/feed resources;</li>
-<li>exposure categories based on wildlife–livestock contact;</li>
-<li>comparative pathogen infection, prevalence, shedding, or
-transmission across host domains when the comparison represents their
-ecological relationship.</li>
-</ul>
-<p>This decision was important because papers can operationalise the
-relationship scientifically without labelling their variable
-“interface”.</p>
-</div>
-<div id="paper-34-as-the-stress-test-example" class="section level3">
-<h3>Paper 34 as the stress-test example</h3>
-<p>Paper 34 was used during development and is provided here as example.
-It used sheep and guanaco in shared/non-shared or mixed/single-host
-contexts and analysed MAP-related outcomes.</p>
-<p>An earlier version of prompts classified it too low because the model
-found the relevant evidence but placed it into the wrong structured
-field. v5.5 therefore:</p>
-<ul>
-<li>gives every interface criterion its own evidence fields;</li>
-<li>explicitly defines implicit operationalisation;</li>
-<li>recognises categorical variables such as shared/non-shared sites as
-quantitative interface representations;</li>
-<li>prevents incomplete structured extraction from becoming a confident
-low score.</li>
-</ul>
-<p>This is why paper 34 became a useful validation case for the final
-Y-axis logic.</p>
-<hr />
-</div>
-</div>
-<div id="the-interface-centrality" class="section level2">
-<h2>7. The Interface Centrality</h2>
-<p>Seven criteria are used to calculate the Y score:</p>
-<ul>
-<li>interface mentioned;</li>
-<li>interface in objectives;</li>
-<li>conceptual framing;</li>
-<li>qualitative representation;</li>
-<li>quantitative variable present;</li>
-<li>variable used in analysis;</li>
-<li>interface-specific question addressed.</li>
-</ul>
-<p>Before scoring, R checks whether all seven have resolved logical
-TRUE/FALSE values.</p>
-<p>If any is unresolved:</p>
-<pre class="text"><code>interface_operationalisation = NA
-interface_label = &quot;Insufficient classification evidence&quot;
-interface_score_complete = FALSE
-interface_needs_review = TRUE</code></pre>
-<p>This prevents a structurally incomplete LLM answer from being
-silently interpreted as “introductory” or “conceptual”.</p>
-<p><code>interface_explicit</code> is retained as useful descriptive
-evidence but is <strong>not required for a high score</strong>. An
-implicitly operationalised interface can therefore score highly.</p>
-<hr />
-</div>
-<div id="why-the-two-axes-are-independent" class="section level2">
-<h2>8. Why the two axes are independent</h2>
-<p>The main figure is intended to separate two questions that are often
-conflated.</p>
-<div id="x-asks" class="section level3">
-<h3>X asks:</h3>
-<p><strong>Which host domain is centred?</strong></p>
-</div>
-<div id="y-asks" class="section level3">
-<h3>Y asks:</h3>
-<p><strong>How deeply is the relationship between the domains
-represented/operationalised?</strong></p>
-<p>Therefore:</p>
-<ul>
-<li>an empirical wildlife study can still have low Interface
-Centrality;</li>
-<li>a domestic-centred study can strongly operationalise the
-interface;</li>
-<li>a balanced study is <strong>not automatically highly
-operationalised</strong>;</li>
-<li>collecting any data alone does not produce a high Y score.</li>
-</ul>
-<p>This independence is one of the main interpretive strengths of the
-synthesis figure (code downstream).</p>
-<hr />
-</div>
-</div>
-<div id="fig.-5-interpretation" class="section level2">
-<h2>9. Fig. 5 interpretation</h2>
-<p>The plotting script does not recalculate either scientific score. It
-simply plots:</p>
-<pre class="r"><code>x = host_orientation
-y = interface_operationalisation</code></pre>
-<p>Positive X = more domestic-centred.<br />
-Negative X = more wildlife-centred.<br />
-X near 0 = balanced host focus.</p>
-<p>Higher Y = greater interface representation/operationalisation.</p>
-<p>The visual quadrants are labelled more cautiously as:</p>
-<ul>
-<li><strong>Higher interface centrality · Wildlife-centred</strong></li>
-<li><strong>Higher interface centrality · Domestic-centred</strong></li>
-<li><strong>Lower interface centrality · Wildlife-centred</strong></li>
-<li><strong>Lower interface centrality · Domestic-centred</strong></li>
-</ul>
-<p>This avoids calling every paper above the visual dividing line fully
-“operationalised” or every paper below it purely “conceptual”. The five
-Y-axis categories retain the precise interpretation.</p>
-<hr />
-</div>
-<div id="quantitative-interface-measures" class="section level2">
-<h2>10. Quantitative interface measures</h2>
-<p>The pipeline deliberately does <strong>not</strong> extract every
-number reported by a study.</p>
-<p>It extracts a quantitative measure only when it directly:</p>
-<ul>
-<li>characterises;</li>
-<li>compares;</li>
-<li>tests;</li>
-<li>models; or</li>
-<li>otherwise operationalises</li>
-</ul>
-<p>the wild–domestic relationship.</p>
-<p>For each qualifying measure, it attempts to retain:</p>
-<ul>
-<li>measure name;</li>
-<li>what it represents;</li>
-<li>measurement method;</li>
-<li>metric/unit;</li>
-<li>analytical role;</li>
-<li>one concise related quantitative result;</li>
-<li>supporting quotation;</li>
-<li>page;</li>
-<li>section.</li>
-</ul>
-<p>This output supports a manuscript table of quantitative approaches
-used to study the interface.</p>
-<p>A paper being quantitative is not enough. Its quantitative measure
-must be relevant to the interface features.</p>
-<hr />
-</div>
-<div id="conceptual-evidence-and-verbatim-statements" class="section level2">
-<h2>11. Conceptual evidence and verbatim statements</h2>
-<p>For each paper, the pipeline retains one best/most representative
-verbatim statement showing how the paper frames, represents, or
-operationalises the wild–domestic relationship for definitions
-discussions.</p>
-<p>It also records whether that statement is:</p>
-<ul>
-<li><code>explicit</code>;</li>
-<li><code>implicit</code>; or</li>
-<li><code>none</code>.</li>
-</ul>
-<p>These fields support the planned conceptual table, especially
-for:</p>
-<ul>
-<li>papers high in different Figure 5 quadrants;</li>
-<li>papers near the balanced host-domain centre;</li>
-<li>papers with high Interface Centrality;</li>
-<li>papers that explicitly or implicitly articulate what the interface
-means.</li>
-</ul>
-<p>The quotation is evidence to inspect and enrich discussions around
-definition and conceptulization.</p>
-<hr />
-</div>
-<div id="evidence-grounding" class="section level2">
-<h2>12. Evidence grounding</h2>
-<p>The pipeline attempts to check whether extracted quotations can be
-located in the page text and records a grounding status.</p>
-<p>During pilot testing, some highly plausible paper-specific quotations
-were labelled <code>NOT_FOUND</code>. The working interpretation is that
-the text matcher can be sensitive to PDF artefacts such as whitespace,
-line breaks, hyphenation, or encoding.</p>
-<p>Therefore:</p>
-<ul>
-<li><code>NOT_FOUND</code> is a <strong>QA flag</strong>, not automatic
-proof of hallucination, and it is passive of verification;</li>
-<li>flagged quotations can be manually checked against the PDF;</li>
-</ul>
-<hr />
-</div>
-<div id="pdf-readability-qa" class="section level2">
-<h2>13. PDF readability QA</h2>
-<p>The pipeline calculates PDF text-quality diagnostics and retains
-<code>pdf_text_status</code>.</p>
-<p>A paper can therefore be flagged as difficult before interpreting
-apparent model failures.</p>
-<p>This distinction matters:</p>
-<pre class="text"><code>bad extraction/readability
-        versus
-model classification problem
-        versus
-R scoring problem</code></pre>
-<p>If a paper had <code>pdf_text_status = OK</code>, means that the LLM
-can read the paper. All readability flags were inspected and rerun when
-needed (2 publications that were not readable (see main text).</p>
-<hr />
-</div>
-<div id="human-audit" class="section level2">
-<h2>14. Human audit</h2>
-<p>The final data was audited by 2 authors on a stratified subset of
-classifications.</p>
-<div id="main-classification-audit" class="section level3">
-<h3>Main classification audit</h3>
-<p>The pipeline creates an audit table containing:</p>
-<ul>
-<li>human-readable question;</li>
-<li>definition;</li>
-<li>AI value;</li>
-<li>evidence quotation;</li>
-<li>page;</li>
-<li>grounding status;</li>
-<li>reviewer value;</li>
-<li>reviewer agreement;</li>
-<li>reviewer notes;</li>
-<li>final human value.</li>
-</ul>
-<p>The script draws <strong>100 audit rows</strong> using a fixed seed
-(<code>42</code>).</p>
-<p>The sample is stratified to:</p>
+<div id="quick-start-downstream-analyses" class="section level2">
+<h2>Quick Start: downstream analyses</h2>
+<p><strong>Status: execution sequence and clean-environment reproduction
+are not yet verified.</strong> This section intentionally avoids
+claiming a working one-command reproduction before it has been
+tested.</p>
 <ol style="list-style-type: decimal">
-<li>represent 100 individual variables for the qualitative review;</li>
-<li>and <strong>50/50 split between Interface and Host
-constructs</strong>;</li>
-<li>top up from remaining eligible rows if needed.</li>
+<li>Obtain the curated repository release containing the final,
+shareable consolidated datasets.</li>
+<li>Open the R project or start R at the repository root.</li>
+<li>Install the package dependencies declared by the final release
+(package versions/environment lockfile still to be finalised).</li>
+<li>Run the documented manuscript analysis and figure scripts in their
+verified order, using project-relative input paths.</li>
+<li>Compare generated tables and figures with the archived outputs and
+manuscript.</li>
 </ol>
-<p>Important: <strong>100 refers to audit criterion rows, not
-necessarily 100 unique papers.</strong></p>
-<p>For Interface rows, the human reviewers use:</p>
-<pre class="text"><code>TRUE / FALSE / UNCLEAR</code></pre>
-<p>For host-role rows:</p>
-<pre class="text"><code>ABSENT / CONTEXTUAL / SECONDARY / PRIMARY / UNCLEAR</code></pre>
+<p>The final release should replace these instructions with exact
+commands, required package versions and an output-to-script map after
+reproducibility testing. <strong>Do not treat the present staging
+archive as an independently verified executable release.</strong></p>
 </div>
-<div id="quantitative-measure-audit" class="section level3">
-<h3>Quantitative-measure audit</h3>
-<p>The pipeline separately creates a sample of up to <strong>100
-extracted quantitative interface measures and their supporting evidence
-(50+50)</strong> for human verification.</p>
-<p>This is important because verifying a Boolean classification and
-verifying a quantitative extraction are different tasks.</p>
-</div>
-<div id="what-the-human-reviewer-should-ask" class="section level3">
-<h3>What the human reviewer should ask</h3>
-<p>For every audited item:</p>
-<ol style="list-style-type: decimal">
-<li>Does the model’s classification match the paper?</li>
-<li>Does the quotation genuinely support that classification?</li>
-<li>Is the page correct?</li>
-<li>Is the model describing the focal paper rather than a cited
-study?</li>
-<li>For host roles, is <code>CONTEXTUAL</code> being distinguished from
-genuine <code>SECONDARY</code> inclusion?</li>
-<li>For interface criteria, has an implicit operationalisation been
-recognised?</li>
-<li>For quantitative measures, is the measure actually about the
-interface rather than merely a number reported by the paper?</li>
-</ol>
-<hr />
-</div>
-</div>
-<div id="what-should-trigger-manual-review" class="section level2">
-<h2>15. What should trigger manual review</h2>
-<p>Further inspection on any flags:</p>
+<div id="how-the-extraction-pipeline-works" class="section level2">
+<h2>How the extraction pipeline works</h2>
+<p>Each publication was associated with a curated bibliographic record
+through <code>paper_id</code>. PDF text was processed by three separate
+LLM modules covering (1) descriptive study metadata, (2) evidence of
+interface representation and operationalisation, and (3)
+wildlife/domestic host-domain roles.</p>
+<p>The LLM generated structured classifications and supporting evidence;
+R then applied predefined rules to calculate two indices:</p>
 <ul>
-<li><code>interface_needs_review = TRUE</code>;</li>
-<li><code>interface_score_complete = FALSE</code>;</li>
-<li><code>host_orientation = NA</code>;</li>
-<li><code>pdf_text_status</code> indicating poor readability;</li>
-<li><code>any_parse_error = TRUE</code>;</li>
-<li>evidence inconsistencies;</li>
-<li><code>grounding_status = NOT_FOUND</code>;</li>
-<li>biologically implausible or internally contradictory
-classifications;</li>
-<li>quantitative measures that conflict with the Boolean interface
-classification (none found in final agreement auditing).</li>
+<li><strong>Host-domain Orientation (X):</strong> relative substantive
+emphasis on wildlife versus domestic animals.</li>
+<li><strong>Interface Centrality / Operationalisation (Y):</strong>
+extent to which the interface is mentioned, represented, measured and
+used analytically.</li>
 </ul>
-<p>Also inspect unusual/extreme papers that will carry substantial
-interpretive weight in the manuscript, even if they are not
-automatically flagged.</p>
-<hr />
+<p>The indices are <strong>not measures of study quality</strong>, and
+deterministic scoring does not establish that upstream classifications
+are error-free. The full definitions, rules, examples and interpretation
+cautions are documented in <a href="docs/pipeline_methods.md#5-host-domain-orientation-the-x-axis">Pipeline
+Methods</a> and <a href="docs/pipeline_methods.md#6-interface-centrality--operationalisation-the-y-axis">the
+Y-axis section</a>.</p>
 </div>
-<div id="repeatability-versus-validity" class="section level2">
-<h2>16. Repeatability versus validity</h2>
-<p>The pipeline was not designed around running all 270 papers more than
-once.</p>
-<p>The preferred validation logic is:</p>
-<ol style="list-style-type: decimal">
-<li><strong>small runs</strong> during development to assess LLM
-repeatability;</li>
-<li><strong>human audit</strong> to assess whether
-classifications/evidence are scientifically defensible;</li>
-<li>targeted manual review of QA flags and influential papers.</li>
-</ol>
-<p>Running the full corpus twice would approximately double model cost
-and produce a second corpus requiring reconciliation without replacing
-the need for human auditing.</p>
-<hr />
+<div id="human-validation-and-quality-assurance" class="section level2">
+<h2>Human validation and quality assurance</h2>
+<p>The pipeline contains evidence-location fields, PDF readability
+diagnostics, parsing/completion flags and sampling routines for human
+audit. The <a href="docs/pipeline_methods.md#14-human-audit">pipeline
+methods manual</a> describes the audit design and review criteria.</p>
+<p><strong>Audit design is not the same as completed
+validation.</strong> Final reviewer counts, agreement estimates,
+adjudications and any manual corrections should be taken from the
+completed validation records and the manuscript Methods. No validation
+performance metric is inferred solely from the existence of an audit
+script.</p>
 </div>
-<div id="checkpointing" class="section level2">
-<h2>17. Checkpointing</h2>
-<p>The frozen production versions save scientific checkpoints
-<strong>after every successfully completed paper</strong>.</p>
-<p>A persistent processing log records:</p>
-<ul>
-<li><code>paper_id</code>;</li>
-<li>filename;</li>
-<li>completion/error status;</li>
-<li>start/end time;</li>
-<li>elapsed time;</li>
-<li>model;</li>
-<li>prompt tokens;</li>
-<li>output tokens;</li>
-<li>estimated API cost;</li>
-<li>error message.</li>
-</ul>
-<p>With <code>resume = TRUE</code>, completed papers are recognised from
-the checkpoint and skipped on restart.</p>
-<p>Conceptually:</p>
-<pre class="text"><code>paper 1 -&gt; process -&gt; save
-paper 2 -&gt; process -&gt; save
-...
-computer/network interruption
-...
-restart -&gt; skip completed papers -&gt; continue</code></pre>
-<hr />
+<div id="source-pdfs-api-access-and-rights" class="section level2">
+<h2>Source PDFs, API access and rights</h2>
+<p>Source article PDFs are <strong>not distributed</strong> in this
+repository. Access to publications through a university or publisher
+subscription does not itself authorise redistribution. Bibliographic
+metadata and identifiers should be used to locate source documents
+independently.</p>
+<p>The extraction code may require API credentials and an available
+model version. No API keys should be committed. The original model
+configuration is recorded for provenance; it does not guarantee
+identical results upon rerun.</p>
+<p>Some extracted records contain quotations or verbatim passages from
+source publications. These fields require a separate redistribution
+review before public deposit. Frozen factual/coded variables and summary
+outputs should be distinguished from substantial copyrighted
+excerpts.</p>
 </div>
-<div id="model-and-cost-accounting" class="section level2">
-<h2>18. Model and cost accounting</h2>
-<p>The frozen OpenAI script records model usage per paper and
-produces:</p>
-<ul>
-<li>per-paper benchmark output;</li>
-<li>run-level benchmark summary;</li>
-<li>mean/median processing time;</li>
-<li>prompt/output token totals;</li>
-<li>estimated API cost;</li>
-<li>projected full-corpus runtime/cost.</li>
-</ul>
-<p>The price constants in the script are assumptions used for estimation
-and should be checked if pricing changes.</p>
-<p>The local Ollama version retains the same scientific architecture as
-a fallback but does not incur API cost.</p>
-<hr />
+<div id="status-and-scope-of-the-documentation" class="section level2">
+<h2>Status and scope of the documentation</h2>
+<p>This repository is designed to support scrutiny and reuse of the
+<strong>code and research workflow</strong>. The technical detail in
+<code>docs/pipeline_methods.md</code> is valuable for users who want to
+inspect the implementation, but <strong>it is not an extra
+methodological requirement for readers of the paper</strong>. Scientific
+claims, results and limitations should be assessed against the published
+manuscript and its formal supplementary materials.</p>
+<p><strong>Before public or reviewer distribution:</strong> verify
+reproducibility, confirm final authoritative inputs and scripts, review
+redistribution rights, document software versions, and check all files
+for credentials and sensitive information.</p>
 </div>
-<div id="main-output-types" class="section level2">
-<h2>19. Main output types</h2>
-<p>The pipeline classifies and exports data for:</p>
-<div id="paper-summary" class="section level3">
-<h3>Paper summary</h3>
-<p>One row per paper with bibliographic metadata, descriptive synthesis
-fields, X/Y scores, QA metrics, timing, tokens, and estimated cost.</p>
-</div>
-<div id="plot-data" class="section level3">
-<h3>Plot data</h3>
-<p>The fields required for Fig. 5, including <code>paper_id</code>, host
-orientation, interface operationalisation, and identifiers for joining
-other bibliometric information.</p>
-</div>
-<div id="disease-long-table" class="section level3">
-<h3>Disease long table</h3>
-<p>One disease/pathogen/transmission representation per relevant
-record.</p>
-</div>
-<div id="quantitative-measures-long" class="section level3">
-<h3>Quantitative measures long</h3>
-<p>One row per extracted interface-specific quantitative measure.</p>
-</div>
-<div id="conceptual-evidence" class="section level3">
-<h3>Conceptual evidence</h3>
-<p>Paper-level X/Y classifications plus the best interface statement and
-bibliographic identifiers.</p>
-</div>
-<div id="evidence-long" class="section level3">
-<h3>Evidence long</h3>
-<p>Criterion-specific quotations/pages/sections and grounding
-status.</p>
-</div>
-<div id="audit" class="section level3">
-<h3>Audit</h3>
-<p>Exported tables with criterion rows.</p>
-</div>
-<div id="module-information" class="section level3">
-<h3>Module information</h3>
-<p>Module-level raw outputs, parsing status, context size, runtime,
-token estimates, and completion metrics.</p>
-</div>
-<div id="pdf-quality" class="section level3">
-<h3>PDF quality</h3>
-<p>Text-extraction/readability diagnostics.</p>
-</div>
-<div id="benchmark" class="section level3">
-<h3>Benchmark</h3>
-<p>Per-paper and run-level runtime/token/cost/QA summaries.</p>
-</div>
-<div id="processing-log" class="section level3">
-<h3>Processing log</h3>
-<p>Persistent completion/error history for safe restart.</p>
-<hr />
-</div>
-</div>
-<div id="pipeline-summary" class="section level2">
-<h2>20. Pipeline summary</h2>
-<blockquote>
-<p>We used an LLM as a structured evidence extractor rather than
-allowing it to directly score papers. Each PDF was linked by paper ID to
-our curated bibliographic master table. Separate model calls extracted
-descriptive study information, evidence about how the wild–domestic
-interface was represented, and the relative role of wildlife and
-domestic hosts. We then converted those structured outputs into two
-deterministic indices in R: Host-domain Orientation, from
-wildlife-centred to domestic-centred, and Interface Centrality, from
-introductory mention to analytical operationalisation.
-Operationalisation could be explicit or implicit, so measurable
-constructs such as shared versus non-shared sites or mixed-host settings
-counted even if authors did not call them an ‘interface’. Every
-interface criterion retained supporting quotations and pages, incomplete
-classifications were not forced into a score, and a stratified subset
-plus quantitative measures was prepared for human audit.</p>
-</blockquote>
-<hr />
-</div>
-<div id="how-to-explain-why-an-llm-was-useful" class="section level2">
-<h2>21. How to explain why an LLM was useful</h2>
-<p>The LLM is being used where conventional keyword rules are weak:</p>
-<ul>
-<li>recognising that different wording can represent the same interface
-concept;</li>
-<li>distinguishing contextual host mentions from substantive
-inclusion;</li>
-<li>recognising implicit operationalisation;</li>
-<li>extracting concise evidence from heterogeneous papers;</li>
-<li>standardising information across a large corpus.</li>
-</ul>
-<p>But interpretive control remains outside the model:</p>
-<ul>
-<li>bibliographic metadata come from the curated master table;</li>
-<li>scoring rules are explicit R code;</li>
-<li>incomplete classifications become missing rather than guessed;</li>
-<li>evidence is retained;</li>
-<li>human audit is built into the workflow.</li>
-</ul>
-<hr />
-</div>
-<div id="questions" class="section level2">
-<h2>22. Questions</h2>
-<div id="did-chatgpt-decide-where-each-paper-goes-in-the-figure" class="section level3">
-<h3>“Did ChatGPT decide where each paper goes in the figure?”</h3>
-<p>Not directly. The model extracts predefined evidence. R applies fixed
-scoring rules to generate X and Y.</p>
-</div>
-<div id="does-a-quantitative-paper-automatically-score-highly-on-interface-centrality" class="section level3">
-<h3>“Does a quantitative paper automatically score highly on Interface
-Centrality?”</h3>
-<p>No. Only quantitative variables and categories that represent the
-wild–domestic interface features count.</p>
-</div>
-<div id="do-authors-have-to-explicitly-say-wildlifelivestock-interface" class="section level3">
-<h3>“Do authors have to explicitly say ‘wildlife–livestock
-interface’?”</h3>
-<p>No. The framework intentionally recognises implicit
-operationalisation.</p>
-</div>
-<div id="why-isnt-uncertainty-scored-as-zero" class="section level3">
-<h3>“Why isn’t uncertainty scored as zero?”</h3>
-<p>Because zero has substantive meanings on both axes. Uncertainty is
-retained as <code>NA</code>.</p>
-</div>
-<div id="how-do-you-know-the-model-did-not-hallucinate" class="section level3">
-<h3>“How do you know the model did not hallucinate?”</h3>
-<p>The workflow retains quotations/pages, grounding flags, PDF-quality
-flags, parsing/completion diagnostics, and human audit fields. A
-grounding flag is not treated as human verification.</p>
-</div>
-<div id="why-not-run-the-model-twice-on-all-papers" class="section level3">
-<h3>“Why not run the model twice on all papers?”</h3>
-<p>Repeatability and validity are different. A repeated subset can
-assess model consistency; human audit is still required to assess
-correctness.</p>
-</div>
-<div id="why-use-the-master-table" class="section level3">
-<h3>“Why use the master table?”</h3>
-<p>It prevents unreliable PDF metadata or model inference from
-contaminating bibliographic identifiers.</p>
-<hr />
-</div>
-</div>
-<div id="how-to-read-fig.-5" class="section level2">
-<h2>23. How to read Fig. 5</h2>
-<p>Do not interpret the figure as a simple “good paper / bad paper”
-ranking.</p>
-<p>A paper low on Y may be scientifically strong but not operationalise
-the wild–domestic relationship. A paper far left or right may
-appropriately focus on one host domain.</p>
-<p>Instead ask:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Where has the literature concentrated its host-domain
-attention?</strong></li>
-<li><strong>How often is the interface merely invoked versus actually
-represented or tested?</strong></li>
-<li><strong>Where are the genuinely integrative studies?</strong></li>
-<li><strong>Are balanced studies also operationalised, or merely
-inclusive in terminology?</strong></li>
-<li><strong>Which regions of conceptual space are sparse?</strong></li>
-<li><strong>What methodological approaches characterise papers with high
-Interface Centrality?</strong></li>
-</ol>
-<p>The figure is therefore a map of <strong>how the literature
-conceptualises and studies the interface</strong>, not a quality
-score.</p>
-<hr />
-</div>
-<div id="interpretation-cautions" class="section level2">
-<h2>24. Interpretation cautions</h2>
-<ul>
-<li>Host-domain Orientation is about <strong>study emphasis</strong>,
-not host importance in nature.</li>
-<li>Interface Centrality is about <strong>how the paper operationalises
-the relationship</strong>, not overall methodological
-sophistication.</li>
-<li>Explicit terminology and actual operationalisation are
-different.</li>
-<li>Mentioning many wildlife/domestic species does not by itself
-establish balanced host focus.</li>
-<li>Collecting data does not by itself establish interface
-operationalisation.</li>
-<li>A review can have substantive host roles without sampling
-animals.</li>
-<li>A high Y score can be based on categorical interface constructs, not
-only continuous metrics.</li>
-<li>Automated evidence grounding remains a QA aid and should not be
-described as human verification.</li>
-</ul>
-<hr />
-</div>
-<div id="frozen-scientific-decisions" class="section level2">
-<h2>25. Frozen scientific decisions</h2>
-<p>The following should be treated as frozen for the production corpus
-unless a genuine systematic failure is discovered:</p>
-<ul>
-<li>master-table bibliographic join by <code>paper_id</code>;</li>
-<li>three-module extraction architecture;</li>
-<li>host-role categories;</li>
-<li>seven-level Host-domain Orientation scoring;</li>
-<li>explicit + implicit interface logic;</li>
-<li>five-level Interface Centrality scoring;</li>
-<li>incomplete-interface fail-safe;</li>
-<li>interface-specific quantitative extraction;</li>
-<li>criterion-specific evidence;</li>
-<li>audit structure.</li>
-</ul>
-<p>Engineering changes (e.g., file writing or logging) can be made
-without changing the scientific framework, but any future change to
-prompts, definitions, schemas, or scoring rules should be documented as
-a new scientific version and evaluated before mixing outputs.</p>
-<hr />
-</div>
-<div id="files-to-preserve-for-reproducibility" class="section level2">
-<h2>26. Files to preserve for reproducibility</h2>
-<p>At minimum, archive together:</p>
-<ul>
-<li>frozen OpenAI v5.5 pipeline;</li>
-<li>frozen Ollama v5.5 fallback;</li>
-<li>Fig. 5 script;</li>
-<li>manuscript summary-table scripts;</li>
-<li><code>master_table.xlsx</code>;</li>
-<li>the exact PDF corpus;</li>
-<li>final checkpoint/final CSV outputs;</li>
-<li>audit samples and completed human-audit files;</li>
-<li>processing log;</li>
-<li>benchmark outputs;</li>
-<li>a record of the model name and run date;</li>
-<li>this README.</li>
-</ul>
-<p>If changes become necessary to the pipeline, create a new version (no
-overwriting scripts).</p>
-<hr />
-</div>
-<div id="final-mental-model" class="section level2">
-<h2>27. Final mental model</h2>
-<p>The easiest way to remember the workflow is:</p>
-<pre class="text"><code>MODEL = reads and extracts evidence
-R     = applies transparent rules
-HUMAN = validates interpretation</code></pre>
-<p>Or, more specifically:</p>
-<pre class="text"><code>What hosts matter?          -&gt; Host roles -&gt; X
-What does the paper do
-with the interface?         -&gt; Interface criteria -&gt; Y
-What supports those calls?  -&gt; Quotes/pages/quantitative evidence
-Can we trust the corpus?    -&gt; QA flags + stratified human audit</code></pre>
-<p>That is the logic to keep in mind when interpreting the
-synthesis.</p>
+<div id="citation-licence-and-availability" class="section level2">
+<h2>Citation, licence and availability</h2>
+<p>A Zenodo DOI, citation metadata and explicit code/data licences will
+be added when the curated release is deposited. Until then, this
+document describes a private working release rather than a completed
+public archive.</p>
 </div>
 </div>
 

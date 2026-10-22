@@ -1,14 +1,21 @@
+# LLM-assisted extraction pipeline: methods and provenance (v5.5)
+
+> **Repository documentation, not an additional manuscript requirement.** This document explains how the deposited code was designed, what its outputs mean, and which steps depend on external source publications. It is supplementary *repository documentation* for readers inspecting or reusing the code. It is **not** a replacement for, or an additional set of required analyses beyond, the manuscript's Methods and supplementary material.
+
+**Scope:** Original v5.5 extraction architecture, classification and scoring rules, diagnostics, and research provenance. The authoritative report of completed analyses, validation outcomes and scientific conclusions is the manuscript and its associated data.
+
+**How to use this document:** Start with the [repository README](../README.md) for file locations, access limitations and the intended reproducibility route. This manual explains the *upstream* pipeline; the manuscript's downstream analyses are intended to run from frozen consolidated outputs, without rerunning PDF extraction.
+
+**Production model noted in the original manual:** `gpt-5.6-terra` with low reasoning effort. This is a historical configuration record, not a guarantee that the same model identifier will remain accessible. The Ollama implementation is described as a fallback, not as a verified equivalent reproduction of production outputs.
+
+**Important distinction:** R applies fixed scoring rules to structured model classifications. The calculation is deterministic given the classifications, but the classifications themselves may contain model errors and require quality assurance.
+
 ---
-output:
-  html_document: default
-  word_document: default
----
-# Wild–Domestic Interface Synthesis Pipeline v5.5
-## Pipeline Manual
+
 
 **Frozen scientific version:** v5.5  
 **Primary production pipeline:** OpenAI API (`gpt-5.6-terra`, reasoning effort = `low`)  
-**Fallback pipeline:** local Ollama version with the same scientific extraction/scoring framework  
+**Local test pipeline:** local Ollama version with the same scientific extraction/scoring framework  
 **Corpus target:** 270 PDFs  
 **Primary connector:** `paper_id`
 
@@ -25,7 +32,7 @@ It has four main jobs:
    - **Interface Centrality / Operationalisation (Y):** how far does the paper move from mentioning the wild–domestic interface to actually representing, measuring, and analytically using it?
 2. **Create manuscript-level descriptive summaries** of study type/design, countries, host taxa/species, diseases/pathogens, agent types, and transmission modes.
 3. **Extract interface-specific quantitative measures and conceptual evidence** for downstream summary and conceptual tables.
-4. **Retain evidence and Qality Assurance information for human auditing.**
+4. **Retain evidence and quality-assurance information for human auditing.**
 
 A key principle is that **the LLM extracts structured evidence, while R deterministically calculates the two synthesis scores**. The LLM does not directly choose the final X or Y coordinate.
 
@@ -61,7 +68,7 @@ PDF filename
                     +--> Fig. 5-ready data
 ```
 
-Each module is a separate model call. Papers are therefore not part of one accumulating conversation: paper 50 does not inherit the preceding 49 papers or make the model "tired".
+Each module is a separate model call, and publications are processed independently without conversational context carried over between papers.
 
 ---
 
@@ -79,9 +86,9 @@ Example:
 34.pdf -> a34 -> master_table.xlsx -> correct bibliographic metadata
 ```
 
-### Why
+### Reasoning
 
-PDF metadata are often dirty, incomplete, or describe a parent book rather than the retrieved chapter. DOI regex extraction can also introduce unnecessary errors. The master table already contains curated bibliographic information, so it is the source of truth.
+PDF metadata are often dirty, incomplete, or describe a parent book rather than the retrieved chapter. DOI regex extraction can also introduce unnecessary errors. The master table already contains curated bibliographic information.
 
 ### Safeguards
 
@@ -226,7 +233,7 @@ Examples that can operationalise the interface features include:
 
 This decision was important because papers can operationalise the relationship scientifically without labelling their variable "interface".
 
-### Paper 34 as the stress-test example
+### Paper 34 as a development example
 
 Paper 34 was used during development and is provided here as example. It used sheep and guanaco in shared/non-shared or mixed/single-host contexts and analysed MAP-related outcomes.
 
@@ -366,7 +373,7 @@ These fields support the planned conceptual table, especially for:
 - papers with high Interface Centrality;
 - papers that explicitly or implicitly articulate what the interface means.
 
-The quotation is evidence to inspect and enrich discussions around definition and conceptulization.
+The quotation is evidence to inspect and enrich discussions around definition and conceptualisation.
 
 ---
 
@@ -378,7 +385,7 @@ During pilot testing, some highly plausible paper-specific quotations were label
 
 Therefore:
 
-- `NOT_FOUND` is a **QA flag**, not automatic proof of hallucination, and it is passive of verification;
+- `NOT_FOUND` is a **QA flag**, not automatic proof of hallucination or evidence of successful verification;
 - flagged quotations can be manually checked against the PDF;
 
 ---
@@ -399,13 +406,13 @@ model classification problem
 R scoring problem
 ```
 
-If a paper had `pdf_text_status = OK`, means that the LLM can read the paper. All readability flags were inspected and rerun when needed (2 publications that were not readable (see main text).
+`pdf_text_status = OK` indicates that automated readability diagnostics did not identify a problem; it does not establish that all relevant text was extracted or correctly interpreted. Consult the manuscript and quality-control records for the actual inspection and rerun outcomes.
 
 ---
 
 ## 14. Human audit
 
-The final data was audited by 2 authors on a stratified subset of classifications.
+The pipeline supports a stratified human audit. The final number of reviewers, completed assessments, agreement estimates, adjudications, and any changes incorporated into the consolidated dataset should be reported from the completed validation records and manuscript Methods; the sampling design below is not itself a report of completed validation.
 
 ### Main classification audit
 
@@ -422,7 +429,7 @@ The pipeline creates an audit table containing:
 - reviewer notes;
 - final human value.
 
-The script draws **100 audit rows** using a fixed seed (`42`).
+The documented sampling procedure targets **100 audit rows** using a fixed seed (`42`).
 
 The sample is stratified to:
 
@@ -446,7 +453,7 @@ ABSENT / CONTEXTUAL / SECONDARY / PRIMARY / UNCLEAR
 
 ### Quantitative-measure audit
 
-The pipeline separately creates a sample of up to **100 extracted quantitative interface measures and their supporting evidence (50+50)** for human verification.
+The documented procedure separately samples up to **100 extracted quantitative interface measures and their supporting evidence (50+50)** for human verification. The completed sample size and findings must be checked against the archived audit files.
 
 This is important because verifying a Boolean classification and verifying a quantitative extraction are different tasks.
 
@@ -541,7 +548,7 @@ The frozen OpenAI script records model usage per paper and produces:
 
 The price constants in the script are assumptions used for estimation and should be checked if pricing changes.
 
-The local Ollama version retains the same scientific architecture as a fallback but does not incur API cost.
+A local Ollama implementation was considered as a fallback. It should be labelled an alternative implementation rather than a source of production results unless its use in the final corpus is documented.
 
 ---
 
@@ -610,7 +617,7 @@ But interpretive control remains outside the model:
 
 ---
 
-## 22. Questions
+## 22. FAQ
 
 ### "Did ChatGPT decide where each paper goes in the figure?"
 Not directly. The model extracts predefined evidence. R applies fixed scoring rules to generate X and Y.
@@ -686,7 +693,7 @@ Engineering changes (e.g., file writing or logging) can be made without changing
 
 ---
 
-## 26. Files to preserve for reproducibility
+## 26. Files to preserve for research provenance
 
 At minimum, archive together:
 
@@ -695,13 +702,13 @@ At minimum, archive together:
 - Fig. 5 script;
 - manuscript summary-table scripts;
 - `master_table.xlsx`;
-- the exact PDF corpus;
+- bibliographic identifiers for the source corpus; retain the original PDFs only in a separately controlled private research archive where permitted, not in the distributed repository;
 - final checkpoint/final CSV outputs;
 - audit samples and completed human-audit files;
 - processing log;
 - benchmark outputs;
 - a record of the model name and run date;
-- this README.
+- this pipeline methods document.
 
 If changes become necessary to the pipeline, create a new version (no overwriting scripts).
 
@@ -709,7 +716,7 @@ If changes become necessary to the pipeline, create a new version (no overwritin
 
 ## 27. Final mental model
 
-The easiest way to remember the workflow is:
+The easiest way to understand the workflow is:
 
 ```text
 MODEL = reads and extracts evidence
